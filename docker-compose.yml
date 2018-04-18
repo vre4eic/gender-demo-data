@@ -1,41 +1,41 @@
 version: '3'
   
 services:
-  vre_gender_data:
+  gender_data:
+    image: vre4eic/gender-demo-data
     build: .
     volumes:
-      - data:/data
+      - gender_swish_volume:/data
 
-  vre_gender_rserve:
+  gender_rserve:
     restart: always
     image: swipl/rserve
     network_mode: "none"
     volumes:
-    - rvolume:/rserve
+    - gender_r_volume:/rserve
 
-  vre_gender_swish_initalize:
-    image: vre4eic/docker-swish
+  gender_swish_initalize:
+    image: vre4eic/swish
     volumes:
-      - data:/data
+      - gender_swish_volume:/data
     depends_on:
-      - vre_gender_rserve
-      - vre_gender_data
+      - gender_rserve
+      - gender_data
     command: --add-config auth_http.pl --add-config data.pl --add-config network.pl --add-config logging.pl --add-config provenance.pl --add-config rdf.pl --add-config r_serve.pl --add-config user_profile.pl 
 
-  vre_gender_swish:
+  gender_swish:
     restart: always
-    image: vre4eic/docker-swish
+    image: vre4eic/swish
     ports:
       - 3050:3050
     volumes:
-      - data:/data
-      - rvolume:/rserve
+      - gender_swish_volume:/data
+      - gender_r_volume:/rserve
     depends_on:
-      - vre_gender_data
-      - vre_gender_rserve
-      - vre_gender_swish_initalize
-
+      - gender_data
+      - gender_rserve
+      - gender_swish_initalize
 
 volumes:
-        rvolume:
-        data:
+        gender_r_volume:
+        gender_swish_volume:
