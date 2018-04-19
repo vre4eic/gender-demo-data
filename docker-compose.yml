@@ -3,7 +3,6 @@ version: '3'
 services:
   gender_data:
     image: vre4eic/gender-demo-data
-    build: .
     volumes:
       - gender_swish_volume:/data
 
