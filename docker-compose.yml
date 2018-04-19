@@ -20,7 +20,7 @@ services:
     depends_on:
       - gender_rserve
       - gender_data
-    command: --add-config auth_http.pl data.pl network.pl logging.pl provenance.pl rdf.pl r_serve.pl user_profile.pl 
+    command: --add-config auth_http.pl data.pl logging.pl provenance.pl rdf.pl r_serve.pl user_profile.pl
 
   gender_swish:
     restart: always
