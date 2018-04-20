@@ -2,10 +2,10 @@ FROM debian:stretch-slim
 
 RUN mkdir /data
 
-ADD rdf.tgz /tmp
-ADD gitty.tgz /tmp
-COPY passwd /tmp
+ADD rdf.tgz /data
+ADD gitty.tgz /data
+COPY passwd /data
 
-RUN mv /tmp/* /data &&  \
-    chown -R root.root /data && \
-    chmod -R 777 /data
+# mv /tmp/* /data &&  \
+RUN  chown -R root.root /data && \
+     chmod -R 777 /data
