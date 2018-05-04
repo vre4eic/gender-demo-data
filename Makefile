@@ -1,4 +1,7 @@
-all: gitty.tgz toe.tgz rdf.tgz
+data: gitty.tgz toe.tgz rdf.tgz
+
+image:
+	docker build --tag vre4eic/gender-demo-data .
 
 gitty.tgz: data/storage config-enabled/network.pl
 	tar czf gitty.tgz data/storage config-enabled/network.pl
