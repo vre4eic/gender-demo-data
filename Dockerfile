@@ -4,6 +4,7 @@ RUN mkdir /data
 
 ADD rdf.tgz /data
 ADD gitty.tgz /data
+ADD toe.tgz /data
 COPY passwd /data
 
 RUN useradd vre4eic_data
