@@ -9,4 +9,5 @@ COPY passwd /data
 
 RUN useradd vre4eic_data
 RUN chown -R vre4eic_data.vre4eic_data /data && \
-    chmod -R 777 /data
+    chown -R root /data/config-enabled && \
+    chmod -R ug+rwX /data/data
