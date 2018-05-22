@@ -1,0 +1,14 @@
+This directory contains the resources to build a docker image with the data
+needed for the reproducability pack described at
+https://github.com/vre4eic/websci2018-reproducibility-pack.
+
+It contains the following files used in the Docker build process:
+
+toe.tgz		# RDF Turtle files with the original data
+rdf.tgz		# Dump of the SWI-Prolog RDF triple store so that the SWISH server comes up with the data already loaded.
+gitty.tgz	# Dump of the SWISH repository with the full history of the notebooks and programs used
+passwd		# password file with the dummy user vre (password vre) to allow login access to the SWISH running in the docker container
+
+Dockerfile	# Docker file to build the image of the data container
+Makefile	# Makefile to simplify building
+README		# This file
