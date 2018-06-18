@@ -4,12 +4,12 @@ data: gitty.tgz toe.tgz rdf.tgz
 image:
 	docker build --tag vre4eic/gender-demo-data .
 
-gitty.tgz: data/storage config-enabled/network.pl
-	tar czf gitty.tgz data/storage config-enabled/network.pl
+gitty.tgz: localdata/data/storage localdata/config-enabled/gender.pl
+	tar czf gitty.tgz localdata/data/storage localdata/config-enabled/gender.pl
 toe.tgz: 
-	tar czf toe.tgz toe
+	tar czf toe.tgz localdata/toe
 rdf.tgz:
-	tar czf rdf.tgz data/RDF
+	tar czf rdf.tgz localdata/data/RDF
 
 localdata:
 	mkdir -p localdata
