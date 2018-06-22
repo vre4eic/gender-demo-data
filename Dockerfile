@@ -1,11 +1,9 @@
-FROM debian:stretch-slim
+FROM vre4eic/swish:vre
 
-RUN mkdir /data
-
+COPY passwd /data
 ADD rdf.tgz /data
 ADD gitty.tgz /data
-ADD toe.tgz /data
-COPY passwd /data
+RUN git clone https://github.com/vre4eic/gender-toe-data.git /data/toe; cd data/toe; git checkout V1.0.1
 
 RUN useradd vre4eic_data
 RUN chown -R vre4eic_data.vre4eic_data /data && \
