@@ -4,10 +4,10 @@ data: gitty.tgz rdf.tgz toe
 image:
 	docker build --tag vre4eic/gender-demo-data .
 
-gitty.tgz: data/data/storage data/config-enabled/gender.pl
-	tar --create --gzip --directory data --file gitty.tgz data/storage config-enabled/gender.pl
+gitty.tgz: data/storage config-enabled/gender.pl
+	tar --create --gzip --file gitty.tgz data/storage config-enabled/gender.pl
 rdf.tgz:
-	tar --create --gzip --directory data --file rdf.tgz data/RDF
+	tar --create --gzip --file rdf.tgz data/RDF
 
 toe:	data/toe FORCE 
 	cd data/toe; git co V1.0.1
