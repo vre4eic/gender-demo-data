@@ -1,0 +1,1654 @@
+@prefix : <http://eurocris.org/ontology/cerif#> .
+@prefix ns0: <http://purl.org/vocab/vann/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <http://eurocris.org/ontology/cerif> .
+
+<http://eurocris.org/ontology/cerif> rdf:type owl:Ontology ;
+                                      dcterms:creator :geert ,
+                                                      :keith ;
+                                      foaf:page <http://eurocris.org/cerif.html> ;
+                                      ns0:preferredNamespaceUri "http://eurocris.org/ontology/cerif#" ;
+                                      dcterms:modified "2016-09-07"^^xsd:date ;
+                                      dcterms:creator :jan ;
+                                      owl:versionInfo "v8 for CERIF1.6"@en ;
+                                      dcterms:creator :msicilia ,
+                                                      :lremy ,
+                                                      :ruizrube ,
+                                                      :brigitte ;
+                                      ns0:preferredNamespacePrefix "cerif" .
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://eurocris.org/ontology/cerif#has_amount
+:has_amount rdf:type owl:ObjectProperty ;
+            owl:inverseOf :is_amount_of ;
+            rdfs:domain :LinkEntityWithAmount ;
+            rdfs:range :Amount ;
+            rdfs:comment ""@en ;
+            rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+            rdfs:label "has amount"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_classification
+:has_classification rdf:type owl:ObjectProperty ;
+                    owl:inverseOf :is_classification_of ;
+                    rdfs:domain :CoreRelationship ;
+                    rdfs:range :Classification ;
+                    rdfs:comment "Indicates a classification for an entity or relationship according to a suitable external vocabulary"@en ;
+                    rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                    rdfs:label "has classification"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_classificationScheme
+:has_classificationScheme rdf:type owl:ObjectProperty ;
+                          owl:inverseOf :is_classificationScheme_of ;
+                          rdfs:domain :Classification ;
+                          rdfs:range :ClassificationScheme ;
+                          rdfs:comment "The Classification Scheme that the Classification is a member of."@en ;
+                          rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                          rdfs:label "has classification scheme"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_country
+:has_country rdf:type owl:ObjectProperty ;
+             owl:inverseOf :is_country_of ;
+             rdfs:domain :EntityWithCountry ;
+             rdfs:range :Country ;
+             rdfs:comment ""@en ;
+             rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+             rdfs:label "has country"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_currency
+:has_currency rdf:type owl:ObjectProperty ;
+              owl:inverseOf :is_currency_of ;
+              rdfs:domain :Amount ;
+              rdfs:range :Currency ;
+              rdfs:comment "Currency used as monetary value for the Amount."@en ;
+              rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+              rdfs:label "has currency"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_defaultCurrency
+:has_defaultCurrency rdf:type owl:ObjectProperty ;
+                     owl:inverseOf :is_defaultCurrency_of ;
+                     rdfs:domain :OrganisationUnit ;
+                     rdfs:range :Currency ;
+                     rdfs:comment "Default currency to be used for the Organisation Unit."@en ;
+                     rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                     rdfs:label "has default currency"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_destination
+:has_destination rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 owl:inverseOf :is_destination_of ;
+                 rdfs:domain :FullLinkEntity ;
+                 rdfs:range :MainEntity ;
+                 rdfs:comment "In a CERIF relationship entity, the relationship is oriented to keep the consistency of the classification term that give the semantic meaning of the relationship. Thus, any CERIF relationship has a CERIF entity as destination entity."@en ;
+                 rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                 rdfs:label "has destination"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_destinationClassification
+:has_destinationClassification rdf:type owl:ObjectProperty ;
+                               owl:inverseOf :is_destinationClassification_of ;
+                               rdfs:domain :ReflexiveLink_Classification ;
+                               rdfs:range :Classification ;
+                               rdfs:comment "This property is a specific case of the has_destination property, applied to the ReflexiveLink_Classification relationship entity."@en ;
+                               rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                               rdfs:label "has destination classification"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_destinationClassificationScheme
+:has_destinationClassificationScheme rdf:type owl:ObjectProperty ;
+                                     owl:inverseOf :is_destinationClassificationScheme_of ;
+                                     rdfs:domain :ReflexiveLink_ClassificationScheme ;
+                                     rdfs:range :ClassificationScheme ;
+                                     rdfs:comment "This property is a specific case of the has_destination property, applied to the ReflexiveLink_ClassificationScheme relationship entity."@en ;
+                                     rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                                     rdfs:label "has destination classification scheme"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_globalAmount
+:has_globalAmount rdf:type owl:ObjectProperty ;
+                  owl:inverseOf :is_globalAmount_of ;
+                  rdfs:domain :Funding ;
+                  rdfs:range :Amount ;
+                  rdfs:comment "Global amount of the Funding."@en ;
+                  rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                  rdfs:label "has global amount"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_identifier
+:has_identifier rdf:type owl:ObjectProperty ;
+                owl:inverseOf :is_identifier_of ;
+                rdfs:domain :Entity ;
+                rdfs:range :FederatedIdentifier ;
+                rdfs:comment "Identifier for the entity."@en ;
+                rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                rdfs:label "has identifier"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_postalAddress
+:has_postalAddress rdf:type owl:ObjectProperty ;
+                   owl:inverseOf :is_postalAddress_of ;
+                   rdfs:domain :ElectronicAddress ;
+                   rdfs:range :PostalAddress ;
+                   rdfs:comment ""@en ;
+                   rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                   rdfs:label "has postal address"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_price
+:has_price rdf:type owl:ObjectProperty ;
+           owl:inverseOf :is_price_of ;
+           rdfs:domain :LinkEntityWithProvision ;
+           rdfs:range :Amount ;
+           rdfs:comment "Provisioning price."@en ;
+           rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+           rdfs:label "has price"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_source
+:has_source rdf:type owl:ObjectProperty ;
+            owl:inverseOf :is_source_of ;
+            rdfs:domain :SimpleLinkEntity ;
+            rdfs:range :MainEntity ;
+            rdfs:comment "In a CERIF relationship entity, the relationship is oriented to keep the consistency of the classification term that give the semantic meaning of the relationship. Thus, any CERIF relationship has a CERIF entity as source entity."@en ;
+            rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+            rdfs:label "has source"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_sourceClassification
+:has_sourceClassification rdf:type owl:ObjectProperty ;
+                          owl:inverseOf :is_sourceClassification_of ;
+                          rdfs:domain :ReflexiveLink_Classification ;
+                          rdfs:range :Classification ;
+                          rdfs:comment "This property is a specific case of the has_source property, applied to the ReflexiveLink_Classification relationship entity."@en ;
+                          rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                          rdfs:label "has source classification"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_sourceClassificationScheme
+:has_sourceClassificationScheme rdf:type owl:ObjectProperty ;
+                                owl:inverseOf :is_sourceClassificationScheme_of ;
+                                rdfs:domain :ReflexiveLink_ClassificationScheme ;
+                                rdfs:range :ClassificationScheme ;
+                                rdfs:comment "This property is a specific case of the has_source property, applied to the ReflexiveLink_ClassificationScheme relationship entity."@en ;
+                                rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                                rdfs:label "has source classification scheme"@en .
+
+
+###  http://eurocris.org/ontology/cerif#is_amount_of
+:is_amount_of rdf:type owl:ObjectProperty ;
+              rdfs:domain :Amount ;
+              rdfs:range :LinkEntityWithAmount ;
+              rdfs:comment "Inverse property of has_amount."@en ;
+              rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+              rdfs:label "is amount of"@en .
+
+
+###  http://eurocris.org/ontology/cerif#is_classificationScheme_of
+:is_classificationScheme_of rdf:type owl:ObjectProperty ;
+                            rdfs:domain :ClassificationScheme ;
+                            rdfs:range :Classification ;
+                            rdfs:comment "Inverse property of has_classificationScheme"@en ;
+                            rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                            rdfs:label "is classification scheme of"@en .
+
+
+###  http://eurocris.org/ontology/cerif#is_classification_of
+:is_classification_of rdf:type owl:ObjectProperty ;
+                      rdfs:domain :Classification ;
+                      rdfs:range :CoreRelationship ;
+                      rdfs:comment "Inverse property of has_classification"@en ;
+                      rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                      rdfs:label "is classification of"@en .
+
+
+###  http://eurocris.org/ontology/cerif#is_country_of
+:is_country_of rdf:type owl:ObjectProperty ;
+               rdfs:domain :Country ;
+               rdfs:range :EntityWithCountry ;
+               rdfs:comment "Inverse property of has_country"@en ;
+               rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+               rdfs:label "is country of"@en .
+
+
+###  http://eurocris.org/ontology/cerif#is_currency_of
+:is_currency_of rdf:type owl:ObjectProperty ;
+                rdfs:domain :Currency ;
+                rdfs:range :Amount ;
+                rdfs:comment "Inverse property of has_currency"@en ;
+                rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                rdfs:label "is currency of"@en .
+
+
+###  http://eurocris.org/ontology/cerif#is_defaultCurrency_of
+:is_defaultCurrency_of rdf:type owl:ObjectProperty ;
+                       rdfs:domain :Currency ;
+                       rdfs:range :OrganisationUnit ;
+                       rdfs:comment "Inverse property of has_defaultCurrency"@en ;
+                       rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                       rdfs:label "is default currency of"@en .
+
+
+###  http://eurocris.org/ontology/cerif#is_destinationClassificationScheme_of
+:is_destinationClassificationScheme_of rdf:type owl:ObjectProperty ;
+                                       rdfs:domain :ClassificationScheme ;
+                                       rdfs:range :ReflexiveLink_ClassificationScheme ;
+                                       rdfs:comment "Inverse property of has_destinationClassificationScheme"@en ;
+                                       rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                                       rdfs:label "is destination classification scheme of"@en .
+
+
+###  http://eurocris.org/ontology/cerif#is_destinationClassification_of
+:is_destinationClassification_of rdf:type owl:ObjectProperty ;
+                                 rdfs:domain :Classification ;
+                                 rdfs:range :ReflexiveLink_Classification ;
+                                 rdfs:comment "Inverse property of has_destinationClassification"@en ;
+                                 rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                                 rdfs:label "is destination classification of"@en .
+
+
+###  http://eurocris.org/ontology/cerif#is_destination_of
+:is_destination_of rdf:type owl:ObjectProperty ;
+                   rdfs:domain :MainEntity ;
+                   rdfs:range :FullLinkEntity ;
+                   rdfs:comment "Inverse property of has_destination"@en ;
+                   rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                   rdfs:label "is destination of"@en .
+
+
+###  http://eurocris.org/ontology/cerif#is_globalAmount_of
+:is_globalAmount_of rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Amount ;
+                    rdfs:range :Funding ;
+                    rdfs:comment "Inverse property of has_globalAmount"@en ;
+                    rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                    rdfs:label "is global amount of"@en .
+
+
+###  http://eurocris.org/ontology/cerif#is_identifier_of
+:is_identifier_of rdf:type owl:ObjectProperty ;
+                  rdfs:domain :FederatedIdentifier ;
+                  rdfs:range :Entity ;
+                  rdfs:comment "Inverse property of has_identifier"@en ;
+                  rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                  rdfs:label "is identifier of"@en .
+
+
+###  http://eurocris.org/ontology/cerif#is_postalAddress_of
+:is_postalAddress_of rdf:type owl:ObjectProperty ;
+                     rdfs:domain :PostalAddress ;
+                     rdfs:range :ElectronicAddress ;
+                     rdfs:comment "Inverse property of has_postalAddress"@en ;
+                     rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                     rdfs:label "is postal address of"@en .
+
+
+###  http://eurocris.org/ontology/cerif#is_price_of
+:is_price_of rdf:type owl:ObjectProperty ;
+             rdfs:domain :Amount ;
+             rdfs:range :LinkEntityWithProvision ;
+             rdfs:comment "Inverse property of has_price"@en ;
+             rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+             rdfs:label "is price of"@en .
+
+
+###  http://eurocris.org/ontology/cerif#is_sourceClassificationScheme_of
+:is_sourceClassificationScheme_of rdf:type owl:ObjectProperty ;
+                                  rdfs:domain :ClassificationScheme ;
+                                  rdfs:range :ReflexiveLink_ClassificationScheme ;
+                                  rdfs:comment "Inverse property of has_sourceClassificationScheme"@en ;
+                                  rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                                  rdfs:label "is source classification scheme of"@en .
+
+
+###  http://eurocris.org/ontology/cerif#is_sourceClassification_of
+:is_sourceClassification_of rdf:type owl:ObjectProperty ;
+                            rdfs:domain :Classification ;
+                            rdfs:range :ReflexiveLink_Classification ;
+                            rdfs:comment "Inverse property of has_sourceClassification"@en ;
+                            rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                            rdfs:label "is source classification of"@en .
+
+
+###  http://eurocris.org/ontology/cerif#is_source_of
+:is_source_of rdf:type owl:ObjectProperty ;
+              rdfs:domain :MainEntity ;
+              rdfs:range :SimpleLinkEntity ;
+              rdfs:comment "Inverse property of has_source"@en ;
+              rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+              rdfs:label "is source of"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://eurocris.org/ontology/cerif#has_IPR
+:has_IPR rdf:type owl:DatatypeProperty ;
+         rdfs:domain :LinkEntityWithProvisionOrderIPR ;
+         rdfs:range xsd:string ;
+         rdfs:comment "Describes the Intellectual Property Rights."@en ;
+         rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+         rdfs:label "has IPR"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_URI
+:has_URI rdf:type owl:DatatypeProperty ;
+         rdfs:domain :CoreEntity ;
+         rdfs:range xsd:string ;
+         rdfs:comment "Describes the Uniform Resource Identifier."@en ;
+         rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+         rdfs:label "has URI"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_abstract
+:has_abstract rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :has_description ;
+              rdfs:range rdf:PlainLiteral ;
+              rdfs:comment "A condensed version of the content."@en ;
+              rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+              rdfs:label "has abstract"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_acronym
+:has_acronym rdf:type owl:DatatypeProperty ;
+             rdfs:domain :MainEntity ;
+             rdfs:range xsd:string ;
+             rdfs:comment "A pronounceable name made up of a series of initial letters or parts of words."@en ;
+             rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+             rdfs:label "has acronym"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_addressLine
+:has_addressLine rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :PostalAddress ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "A line of the postal address."@en ;
+                 rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                 rdfs:label "has address line"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_alternativeName
+:has_alternativeName rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :has_name ;
+                     rdfs:domain :Product ;
+                     rdfs:range rdf:PlainLiteral ;
+                     rdfs:comment "An additional name for the product."@en ;
+                     rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                     rdfs:label "has alternative name"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_availability
+:has_availability rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :LinkEntityWithProvision ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Describes how the entity is accessible."@en ;
+                  rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                  rdfs:label "has availability"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_bibliographicNote
+:has_bibliographicNote rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :Publication ;
+                       rdfs:range rdf:PlainLiteral ;
+                       rdfs:comment ""@en ;
+                       rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                       rdfs:label "has bibliographic note"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_birthdate
+:has_birthdate rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Person ;
+               rdfs:range xsd:date ;
+               rdfs:comment "The date of birth of the person."@en ;
+               rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+               rdfs:label "has birthdate"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_cityTown
+:has_cityTown rdf:type owl:DatatypeProperty ;
+              rdfs:domain :EntityWithCity ;
+              rdfs:range xsd:string ;
+              rdfs:comment ""@en ;
+              rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+              rdfs:label "has city/town"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_conditions
+:has_conditions rdf:type owl:DatatypeProperty ;
+                rdfs:domain :LinkEntityWithProvision ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Describes the conditions under which the entity can be provisioned."@en ;
+                rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                rdfs:label "has conditions"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_copyright
+:has_copyright rdf:type owl:DatatypeProperty ;
+               rdfs:domain :LinkEntityWithCopyright ;
+               rdfs:range xsd:string ;
+               rdfs:comment ""@en ;
+               rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+               rdfs:label "has copyright"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_count
+:has_count rdf:type owl:DatatypeProperty ;
+           rdfs:domain :LinkEntityWithCounting ;
+           rdfs:range xsd:float ;
+           rdfs:comment "A quantity linked to the entity."@en ;
+           rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+           rdfs:label "has count"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_countFloatPChange
+:has_countFloatPChange rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :Measurement ;
+                       rdfs:range xsd:float ;
+                       rdfs:comment ""@en ;
+                       rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                       rdfs:label "has countFloatPChange"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_countInt
+:has_countInt rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Measurement ;
+              rdfs:range xsd:int ;
+              rdfs:comment ""@en ;
+              rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+              rdfs:label "has countInt"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_countIntChange
+:has_countIntChange rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Measurement ;
+                    rdfs:range xsd:int ;
+                    rdfs:comment ""@en ;
+                    rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                    rdfs:label "has countIntChange"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_countryCode
+:has_countryCode rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Country ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "The country code, according to the ISO3166 standard."@en ;
+                 rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                 rdfs:label "has country code"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_currencyCode
+:has_currencyCode rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Currency ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "The currency code, according to the ISO4217 standard."@en ;
+                  rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                  rdfs:label "has currency code"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_curriculumVitaeDocument
+:has_curriculumVitaeDocument rdf:type owl:DatatypeProperty ;
+                             rdfs:domain :CurriculumVitae ;
+                             rdfs:range xsd:string ;
+                             rdfs:comment """A short account of one's career, qualifications and skills.
+
+A CV can be stored in any digital format eg.
+MS-Word (DOC),
+Adobe Acrobat (PDF),
+MS-PowerPoint (PPT)."""@en ;
+                             rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                             rdfs:label "has curriculum vitae document"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_dateTime
+:has_dateTime rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Measurement ;
+              rdfs:range xsd:date ;
+              rdfs:comment ""@en ;
+              rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+              rdfs:label "has date-time"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_definition
+:has_definition rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Classification ;
+                rdfs:range rdf:PlainLiteral ;
+                rdfs:comment "The definition of the classification."@en ;
+                rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                rdfs:label "has definition"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_definitionSource
+:has_definitionSource rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :Classification ;
+                      rdfs:range rdf:PlainLiteral ;
+                      rdfs:comment "The source of the definition of the classification."@en ;
+                      rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                      rdfs:label "has definition's source"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_description
+:has_description rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :CoreEntity ;
+                 rdfs:range rdf:PlainLiteral ;
+                 rdfs:comment "The description of the entity."@en ;
+                 rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                 rdfs:label "has description"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_descriptionSource
+:has_descriptionSource rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :SemanticLayer ;
+                       rdfs:range rdf:PlainLiteral ;
+                       rdfs:comment "The source of the description."@en ;
+                       rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                       rdfs:label "has description's source"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_eastBoundaryLongitude
+:has_eastBoundaryLongitude rdf:type owl:DatatypeProperty ;
+                           rdfs:domain :GeographicBoundingBox ;
+                           rdfs:range xsd:float ;
+                           rdfs:comment "Eastern-most coordinate of the limit of the dataset extent, expressed in longitude in decimal degrees (positive east)."@en ;
+                           rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                           rdfs:label "has east boundary longitude"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_edition
+:has_edition rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Publication ;
+             rdfs:range xsd:string ;
+             rdfs:comment "The edition of a book, long form (such as \"first\" or \"second\")."@en ;
+             rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+             rdfs:label "has edition"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_endDate
+:has_endDate rdf:type owl:DatatypeProperty ;
+             rdfs:domain :TimeFramedEntity ;
+             rdfs:range xsd:date ;
+             rdfs:comment """In a CERIF relation entity, the end date represents the date or time at which this relationship stops to be true.
+Also known as the end of the Valid Time."""@en ;
+             rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+             rdfs:label "has end date"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_endPage
+:has_endPage rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Publication ;
+             rdfs:range xsd:string ;
+             rdfs:comment ""@en ;
+             rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+             rdfs:label "has end page"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_example
+:has_example rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Classification ;
+             rdfs:range rdf:PlainLiteral ;
+             rdfs:comment ""@en ;
+             rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+             rdfs:label "has example"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_exampleSource
+:has_exampleSource rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Classification ;
+                   rdfs:range rdf:PlainLiteral ;
+                   rdfs:comment "The source of the example."@en ;
+                   rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                   rdfs:label "has example's source"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_familyNames
+:has_familyNames rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :PersonName ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment ""@en ;
+                 rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                 rdfs:label "has family names"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_firstNames
+:has_firstNames rdf:type owl:DatatypeProperty ;
+                rdfs:domain :PersonName ;
+                rdfs:range xsd:string ;
+                rdfs:comment ""@en ;
+                rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                rdfs:label "has first names"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_fraction
+:has_fraction rdf:type owl:DatatypeProperty ;
+              rdfs:domain :CoreRelationship ;
+              rdfs:range xsd:float ;
+              rdfs:comment "Fractional value to indicate a classification reference or a % allocation in the relationship between entities."@en ;
+              rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+              rdfs:label "has fraction"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_gender
+:has_gender rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Person ;
+            rdfs:range [ rdf:type rdfs:Datatype ;
+                         owl:oneOf [ rdf:type rdf:List ;
+                                     rdf:first "f" ;
+                                     rdf:rest [ rdf:type rdf:List ;
+                                                rdf:first "m" ;
+                                                rdf:rest [ rdf:type rdf:List ;
+                                                           rdf:first "u" ;
+                                                           rdf:rest rdf:nil
+                                                         ]
+                                              ]
+                                   ]
+                       ] .
+
+
+###  http://eurocris.org/ontology/cerif#has_headcount
+:has_headcount rdf:type owl:DatatypeProperty ;
+               rdfs:domain :OrganisationUnit ;
+               rdfs:range xsd:int ;
+               rdfs:comment "The count of working staff in an organisation."@en ;
+               rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+               rdfs:label "has headcount"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_id_value
+:has_id_value rdf:type owl:DatatypeProperty ;
+              rdfs:domain :FederatedIdentifier ;
+              rdfs:range xsd:string ;
+              rdfs:comment "The value of the identifier."@en ;
+              rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+              rdfs:label "has identifier value"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_issue
+:has_issue rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Publication ;
+           rdfs:range xsd:string ;
+           rdfs:comment ""@en ;
+           rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+           rdfs:label "has issue"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_keywords
+:has_keywords rdf:type owl:DatatypeProperty ;
+              rdfs:domain :MainEntity ;
+              rdfs:range rdf:PlainLiteral ;
+              rdfs:comment ""@en ;
+              rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+              rdfs:label "has keywords"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_languageCode
+:has_languageCode rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Language ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "The language code, according to the ISO639 standard."@en ;
+                  rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                  rdfs:label "has language code"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_maximumElevation
+:has_maximumElevation rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :GeographicBoundingBox ;
+                      rdfs:range xsd:float ;
+                      rdfs:comment "The elevation of a geographic location is its height above a fixed reference point[citation needed], most commonly a reference geoid, a mathematical model of the Earth's sea level as an equipotential gravitational surface (see Geodetic system, vertical datum). Elevation, or geometric height, is mainly used when referring to points on the Earth's surface, while altitude or geopotential height is used for points above the surface, such as an aircraft in flight or a spacecraft in orbit, and depth is used for points below the surface."@en ;
+                      rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                      rdfs:label "has maximum elevation"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_mediumCreationDate
+:has_mediumCreationDate rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :Medium ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "The date of creation of the medium."@en ;
+                        rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                        rdfs:label "has medium creation date"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_mimeType
+:has_mimeType rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Medium ;
+              rdfs:range xsd:string ;
+              rdfs:comment ""@en ;
+              rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+              rdfs:label "has MIME type"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_minimumElevation
+:has_minimumElevation rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :GeographicBoundingBox ;
+                      rdfs:range xsd:float ;
+                      rdfs:comment "The elevation of a geographic location is its height above a fixed reference point[citation needed], most commonly a reference geoid, a mathematical model of the Earth's sea level as an equipotential gravitational surface (see Geodetic system, vertical datum). Elevation, or geometric height, is mainly used when referring to points on the Earth's surface, while altitude or geopotential height is used for points above the surface, such as an aircraft in flight or a spacecraft in orbit, and depth is used for points below the surface."@en ;
+                      rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                      rdfs:label "has minimum elevation"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_name
+:has_name rdf:type owl:DatatypeProperty ;
+          rdfs:domain :CoreEntity ;
+          rdfs:range rdf:PlainLiteral ;
+          rdfs:comment "The name of the entity."@en ;
+          rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+          rdfs:label "has name"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_nameAbbreviation
+:has_nameAbbreviation rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf :has_name ;
+                      rdfs:domain :Publication ;
+                      rdfs:range rdf:PlainLiteral ;
+                      rdfs:comment ""@en ;
+                      rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                      rdfs:label "has name abbreviation"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_nameSource
+:has_nameSource rdf:type owl:DatatypeProperty ;
+                rdfs:domain :ClassificationScheme ;
+                rdfs:range rdf:PlainLiteral ;
+                rdfs:comment "A formal abbreviation system used for service provision."@en ;
+                rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                rdfs:label "has name's source"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_northBoundaryLatitude
+:has_northBoundaryLatitude rdf:type owl:DatatypeProperty ;
+                           rdfs:domain :GeographicBoundingBox ;
+                           rdfs:range xsd:float ;
+                           rdfs:comment "Northern-most coordinate of the limit of the dataset extent, expressed in latitude in decimal degrees (positive north)."@en ;
+                           rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                           rdfs:label "has north boundary latitude"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_number
+:has_number rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Publication ;
+            rdfs:range xsd:string ;
+            rdfs:comment "The number of a journal, magazine, or technical report, if applicable. (Most publications have a volume, but no number field.)"@en ;
+            rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+            rdfs:label "has number"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_numericCurrencyCode
+:has_numericCurrencyCode rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :Currency ;
+                         rdfs:range xsd:string ;
+                         rdfs:comment "The numeric currency code, according to the ISO4217 standard."@en ;
+                         rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                         rdfs:label "has numeric currency code"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_order
+:has_order rdf:type owl:DatatypeProperty ;
+           rdfs:domain :LinkEntityWithOrder ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Relative order between creators and/or contributors."@en ;
+           rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+           rdfs:label "has order"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_postalCode
+:has_postalCode rdf:type owl:DatatypeProperty ;
+                rdfs:domain :PostalAddress ;
+                rdfs:range xsd:string ;
+                rdfs:comment ""@en ;
+                rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                rdfs:label "has postal code"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_publicationDate
+:has_publicationDate rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :Publication ;
+                     rdfs:range xsd:date ;
+                     rdfs:comment " 	The minimum: year of publication (or, if unpublished, the year of creation). In CERIF the datatype of PublicationDate has been specified as a date. That means at the application, the often not available month and day values have to be filled by the application with default values. A string value would not allow required computation related to years."@en ;
+                     rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                     rdfs:label "has publication date"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_researchActivity
+:has_researchActivity rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf :has_description ;
+                      rdfs:domain :OrganisationUnit ;
+                      rdfs:range rdf:PlainLiteral ;
+                      rdfs:comment ""@en ;
+                      rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                      rdfs:label "has research activity"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_researchInterest
+:has_researchInterest rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf :has_description ;
+                      rdfs:domain :Person ;
+                      rdfs:range rdf:PlainLiteral ;
+                      rdfs:comment ""@en ;
+                      rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                      rdfs:label "has research interest"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_roleExpression
+:has_roleExpression rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Classification ;
+                    rdfs:range rdf:PlainLiteral ;
+                    rdfs:comment "We understand, that a term describes the function of a role or the properties of a role associated with an entity, where (i.e.) in a person-publication relationship the role 'authoring' leads to a role expression (cfRoleExpr) 'is author of', and inversely (cfRoleExprOpp) 'is authored by*, and where the property in the person entity is 'author', and in the publication entity it is 'authored'."@en ;
+                    rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                    rdfs:label "has role expression"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_roleExpressionOpposite
+:has_roleExpressionOpposite rdf:type owl:DatatypeProperty ;
+                            rdfs:domain :Classification ;
+                            rdfs:range rdf:PlainLiteral ;
+                            rdfs:comment "We understand, that a term describes the function of a role or the properties of a role associated with an entity, where (i.e.) in a person-publication relationship the role 'authoring' leads to a role expression (cfRoleExpr) 'is author of', and inversely (cfRoleExprOpp) 'is authored by*, and where the property in the person entity is 'author', and in the publication entity it is 'authored'."@en ;
+                            rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                            rdfs:label "has role expression opposite"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_series
+:has_series rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Publication ;
+            rdfs:range xsd:string ;
+            rdfs:comment "The series of books the book was published in."@en ;
+            rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+            rdfs:label "has series"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_size
+:has_size rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Medium ;
+          rdfs:range xsd:float ;
+          rdfs:comment ""@en ;
+          rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+          rdfs:label "has size"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_skillReading
+:has_skillReading rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :LinkEntityWithLanguageSkill ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Language reading skills."@en ;
+                  rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                  rdfs:label "has skill for reading"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_skillSpeaking
+:has_skillSpeaking rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :LinkEntityWithLanguageSkill ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Language speaking skills."@en ;
+                   rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                   rdfs:label "has skill for speaking"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_skillWriting
+:has_skillWriting rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :LinkEntityWithLanguageSkill ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Language writing skills."@en ;
+                  rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                  rdfs:label "has skill for writing"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_southBoundaryLatitude
+:has_southBoundaryLatitude rdf:type owl:DatatypeProperty ;
+                           rdfs:domain :GeographicBoundingBox ;
+                           rdfs:range xsd:float ;
+                           rdfs:comment "Southern-most coordinate of the limit of the dataset extent, expressed in latitude in decimal degrees (positive north)."@en ;
+                           rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                           rdfs:label "has south boundary latitude"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_startDate
+:has_startDate rdf:type owl:DatatypeProperty ;
+               rdfs:domain :TimeFramedEntity ;
+               rdfs:range xsd:date ;
+               rdfs:comment """In a Link Table, the StartDate attribute represents the date or time at which this record is true in the modelled world.
+Also known as the Valid Time."""@en ;
+               rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+               rdfs:label "has start date"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_startPage
+:has_startPage rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Publication ;
+               rdfs:range xsd:string ;
+               rdfs:comment ""@en ;
+               rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+               rdfs:label "has start page"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_stateOfCountry
+:has_stateOfCountry rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :PostalAddress ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment ""@en ;
+                    rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                    rdfs:label "has state of country"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_subtitle
+:has_subtitle rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :has_title ;
+              rdfs:domain :Publication ;
+              rdfs:range rdf:PlainLiteral ;
+              rdfs:comment " 	The publication subtitle."@en ;
+              rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+              rdfs:label "has subtitle"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_term
+:has_term rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :has_name ;
+          rdfs:domain :Classification ;
+          rdfs:range rdf:PlainLiteral ;
+          rdfs:comment "We understand, that a term describes the function of a role or the properties of a role associated with an entity, where (i.e.) in a person-publication relationship the role 'authoring' leads to a role expression (cfRoleExpr) 'is author of', and inversely (cfRoleExprOpp) 'is authored by*, and where the property in the person entity is 'author', and in the publication entity it is 'authored'. "@en ;
+          rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+          rdfs:label "has term"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_termSource
+:has_termSource rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Classification ;
+                rdfs:range rdf:PlainLiteral ;
+                rdfs:comment "The source of the term."@en ;
+                rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                rdfs:label "has term's source"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_title
+:has_title rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :has_name ;
+           rdfs:range rdf:PlainLiteral ;
+           rdfs:comment ""@en ;
+           rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+           rdfs:label "has title"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_totalPages
+:has_totalPages rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Publication ;
+                rdfs:range xsd:string ;
+                rdfs:comment "The total number of pages."@en ;
+                rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                rdfs:label "has total pages"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_turnover
+:has_turnover rdf:type owl:DatatypeProperty ;
+              rdfs:domain :OrganisationUnit ;
+              rdfs:range xsd:float ;
+              rdfs:comment "In accounting, the number of times an asset is replaced during a financial period."@en ;
+              rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+              rdfs:label "has turnover"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_valFloatP
+:has_valFloatP rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Measurement ;
+               rdfs:range xsd:float ;
+               rdfs:comment ""@en ;
+               rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+               rdfs:label "has valFloatP"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_valJudgeNum
+:has_valJudgeNum rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Measurement ;
+                 rdfs:range xsd:float ;
+                 rdfs:comment ""@en ;
+                 rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                 rdfs:label "has valJudgeNum"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_valJudgeNumChange
+:has_valJudgeNumChange rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :Measurement ;
+                       rdfs:range xsd:float ;
+                       rdfs:comment ""@en ;
+                       rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                       rdfs:label "has valJudgeNumChange"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_valJudgeText
+:has_valJudgeText rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Measurement ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment ""@en ;
+                  rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                  rdfs:label "has valJudgeText"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_valJudgeTextChange
+:has_valJudgeTextChange rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :Measurement ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment ""@en ;
+                        rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                        rdfs:label "has valJudgeTextChange"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_value
+:has_value rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Amount ;
+           rdfs:range xsd:float ;
+           rdfs:comment "The value of the Amount."@en ;
+           rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+           rdfs:label "has value"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_versionInformation
+:has_versionInformation rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :ResultEntity ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment ""@en ;
+                        rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                        rdfs:label "has version information"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_volume
+:has_volume rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Publication ;
+            rdfs:range xsd:string ;
+            rdfs:comment "The volume (book), a single book that is part of a collection."@en ;
+            rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+            rdfs:label "has volume"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_westBoundaryLongitude
+:has_westBoundaryLongitude rdf:type owl:DatatypeProperty ;
+                           rdfs:domain :GeographicBoundingBox ;
+                           rdfs:range xsd:float ;
+                           rdfs:comment "Western-most coordinate of the limit of the dataset extent, expressed in longitude in decimal degrees (positive east)."@en ;
+                           rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                           rdfs:label "has west boundary longitude"@en .
+
+
+###  http://eurocris.org/ontology/cerif#has_year
+:has_year rdf:type owl:DatatypeProperty ;
+          rdfs:domain :LinkEntityWithCounting ;
+          rdfs:range xsd:int ;
+          rdfs:comment ""@en ;
+          rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+          rdfs:label "has year"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://eurocris.org/ontology/cerif#Amount
+:Amount rdf:type owl:Class ;
+        rdfs:subClassOf :Entity ;
+        rdfs:comment "A CERIF Amount is a quantity of money."@en ;
+        rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+        rdfs:label "Amount"@en .
+
+
+###  http://eurocris.org/ontology/cerif#BaseEntity
+:BaseEntity rdf:type owl:Class ;
+            rdfs:subClassOf :MainEntity ;
+            rdfs:comment "CERIF regroups entities in several global concepts. Base Entity is the global concept for organisations, persons and projects which represent the core concepts."@en ;
+            rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+            rdfs:label "Base Entity"@en .
+
+
+###  http://eurocris.org/ontology/cerif#Citation
+:Citation rdf:type owl:Class ;
+          rdfs:subClassOf :SecondLayerEntity ;
+          rdfs:comment """A citation is an acknowledgment, credit, reference, mention, quotation (a short note recognizing a source of information or of a quoted passage).
+Definition Source: http://wordnetweb.princeton.edu/perl/webwn?s=citation
+In CERIF, the citation concept is used for publication references outside from the current information system."""@en ;
+          rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+          rdfs:label "Citation"@en .
+
+
+###  http://eurocris.org/ontology/cerif#Classification
+:Classification rdf:type owl:Class ;
+                rdfs:subClassOf :SemanticLayer ,
+                                :TimeFramedEntity ;
+                rdfs:comment """An instance of a CERIF Classification represents a term of a vocabulary. The vocabulary is an instance of a CERIF Classification Scheme.
+A term can be used to describe another entity or a link between two entities."""@en ;
+                rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                rdfs:label "Classification"@en .
+
+
+###  http://eurocris.org/ontology/cerif#ClassificationScheme
+:ClassificationScheme rdf:type owl:Class ;
+                      rdfs:subClassOf :SemanticLayer ;
+                      rdfs:comment "A CERIF Classification Scheme is a vocabulary that contains terms. Terms are represented using the CERIF Classification entity."@en ;
+                      rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                      rdfs:label "Classification Scheme"@en .
+
+
+###  http://eurocris.org/ontology/cerif#CoreEntity
+:CoreEntity rdf:type owl:Class ;
+            rdfs:subClassOf :Entity ;
+            rdfs:comment "A Core Entity is a CERIF entity with basic information, like a name and a description."@en ;
+            rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+            rdfs:label "Core Entity"@en .
+
+
+###  http://eurocris.org/ontology/cerif#CoreRelationship
+:CoreRelationship rdf:type owl:Class ;
+                  rdfs:subClassOf :TimeFramedEntity ;
+                  rdfs:comment "A Core Relationship is the CERIF root entity to describe complex relationship between two entities. A Core Relationship can be described with a Classification."@en ;
+                  rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                  rdfs:label "Core Relationship"@en .
+
+
+###  http://eurocris.org/ontology/cerif#Country
+:Country rdf:type owl:Class ;
+         rdfs:subClassOf :SecondLayerEntity ;
+         rdfs:comment ""@en ;
+         rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+         rdfs:label "Country"@en .
+
+
+###  http://eurocris.org/ontology/cerif#Currency
+:Currency rdf:type owl:Class ;
+          rdfs:subClassOf :EntityWithCountry ,
+                          :SecondLayerEntity ;
+          rdfs:comment "Currency represent formal monetary units."@en ;
+          rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+          rdfs:label "Currency"@en .
+
+
+###  http://eurocris.org/ontology/cerif#CurriculumVitae
+:CurriculumVitae rdf:type owl:Class ;
+                 rdfs:subClassOf :SecondLayerEntity ;
+                 rdfs:comment """A curriculum vitae (cv) is a summary of one's academic and work history.
+Definition Source: http://wordnetweb.princeton.edu/perl/webwn?s=cv"""@en ;
+                 rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                 rdfs:label "Curriculum Vitae"@en .
+
+
+###  http://eurocris.org/ontology/cerif#ElectronicAddress
+:ElectronicAddress rdf:type owl:Class ;
+                   rdfs:subClassOf :SecondLayerEntity ;
+                   rdfs:comment """An electronic address is a computer address, reference ((computer science) the code that identifies where a piece of information is stored).
+Definition Source: http://wordnetweb.princeton.edu/perl/webwn?s=address"""@en ;
+                   rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                   rdfs:label "Electronic Address"@en .
+
+
+###  http://eurocris.org/ontology/cerif#Entity
+:Entity rdf:type owl:Class ;
+        rdfs:comment "Common superclass of all CERIF entities, as an aid in querying."@en ;
+        rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+        rdfs:label "Entity"@en .
+
+
+###  http://eurocris.org/ontology/cerif#EntityWithCity
+:EntityWithCity rdf:type owl:Class ;
+                rdfs:subClassOf :EntityWithCountry ;
+                rdfs:comment "Superclass of CERIF entities having a city as property."@en ;
+                rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                rdfs:label "Entity With City"@en .
+
+
+###  http://eurocris.org/ontology/cerif#EntityWithCountry
+:EntityWithCountry rdf:type owl:Class ;
+                   rdfs:subClassOf :MainEntity ;
+                   rdfs:comment "Superclass of CERIF entities having a reference to a CERIF Country."@en ;
+                   rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                   rdfs:label "Entity With Country"@en .
+
+
+###  http://eurocris.org/ontology/cerif#Equipment
+:Equipment rdf:type owl:Class ;
+           rdfs:subClassOf :InfrastructureEntity ;
+           rdfs:comment """An equipment is an instrumentality needed for an undertaking or to perform a service:
+Definition Source: http://wordnetweb.princeton.edu/perl/webwn?s=equipment"""@en ;
+           rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+           rdfs:label "Equipment"@en .
+
+
+###  http://eurocris.org/ontology/cerif#Event
+:Event rdf:type owl:Class ;
+       rdfs:subClassOf :EntityWithCity ,
+                       :SecondLayerEntity ,
+                       :TimeFramedEntity ;
+       rdfs:comment """An event is something that happens at a given place and time.
+Definition Source: http://wordnetweb.princeton.edu/perl/webwn?s=event"""@en ;
+       rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+       rdfs:label "Event"@en .
+
+
+###  http://eurocris.org/ontology/cerif#ExpertiseSkill
+:ExpertiseSkill rdf:type owl:Class ;
+                rdfs:subClassOf :SecondLayerEntity ;
+                rdfs:comment ""@en ;
+                rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                rdfs:label "Expertise And Skill"@en .
+
+
+###  http://eurocris.org/ontology/cerif#Facility
+:Facility rdf:type owl:Class ;
+          rdfs:subClassOf :InfrastructureEntity ;
+          rdfs:comment "A facility is a space or equipment necessary for conducting research."@en ;
+          rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+          rdfs:label "Facility"@en .
+
+
+###  http://eurocris.org/ontology/cerif#FederatedIdentifier
+:FederatedIdentifier rdf:type owl:Class ;
+                     rdfs:subClassOf :MainEntity ,
+                                     :TimeFramedEntity ;
+                     rdfs:comment ""@en ;
+                     rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                     rdfs:label "Federated Identifier"@en .
+
+
+###  http://eurocris.org/ontology/cerif#FullLinkEntity
+:FullLinkEntity rdf:type owl:Class ;
+                rdfs:subClassOf :SimpleLinkEntity ;
+                rdfs:comment "CERIF relationship entity that links two CERIF entities."@en ;
+                rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                rdfs:label "Full Link Entity"@en .
+
+
+###  http://eurocris.org/ontology/cerif#Funding
+:Funding rdf:type owl:Class ;
+         rdfs:subClassOf :SecondLayerEntity ;
+         rdfs:comment "Funding is an amount of money or inkind equivalent value."@en ;
+         rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+         rdfs:label "Funding"@en .
+
+
+###  http://eurocris.org/ontology/cerif#GeographicBoundingBox
+:GeographicBoundingBox rdf:type owl:Class ;
+                       rdfs:subClassOf :SecondLayerEntity ;
+                       rdfs:comment """A geographic bounding box is the extent of the resource in the geographic space, given as a bounding box.
+Definition Source: http://inspire-registry.jrc.ec.europa.eu/registers/GLOSSARY/items/167;jsessionid=23867F8AABA4DE08237EF7A868CB16AA"""@en ;
+                       rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                       rdfs:label "Geographic Bounding Box"@en .
+
+
+###  http://eurocris.org/ontology/cerif#Indicator
+:Indicator rdf:type owl:Class ;
+           rdfs:subClassOf :IndicatorAndMeasurement ;
+           rdfs:comment """An indicator is a number or ratio (a value on a scale of measurement) derived from a series of observed facts; can reveal relative changes as a function of time.
+Definition Source: http://www.thefreedictionary.com/indicator"""@en ;
+           rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+           rdfs:label "Indicator"@en .
+
+
+###  http://eurocris.org/ontology/cerif#IndicatorAndMeasurement
+:IndicatorAndMeasurement rdf:type owl:Class ;
+                         rdfs:subClassOf :MainEntity ;
+                         rdfs:comment "CERIF regroups entities in several global concepts. Idicator and Measurements is the global concept for indicators and measurements."@en ;
+                         rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                         rdfs:label "Indicator And Measurement"@en .
+
+
+###  http://eurocris.org/ontology/cerif#InfrastructureEntity
+:InfrastructureEntity rdf:type owl:Class ;
+                      rdfs:subClassOf :MainEntity ;
+                      rdfs:comment "CERIF regroups entities in several global concepts. Infrastructure Entity is the global concept for all what concern buildings, equipments and services needed for research activity."@en ;
+                      rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                      rdfs:label "Infrastructure Entity"@en .
+
+
+###  http://eurocris.org/ontology/cerif#Language
+:Language rdf:type owl:Class ;
+          rdfs:subClassOf :SecondLayerEntity ;
+          rdfs:comment ""@en ;
+          rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+          rdfs:label "Language"@en .
+
+
+###  http://eurocris.org/ontology/cerif#LinkEntityWithAmount
+:LinkEntityWithAmount rdf:type owl:Class ;
+                      rdfs:subClassOf :FullLinkEntity ;
+                      rdfs:comment "Superclass of CERIF relationship entities having a reference to a CERIF Amount."@en ;
+                      rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                      rdfs:label "Link Entity With Amount"@en .
+
+
+###  http://eurocris.org/ontology/cerif#LinkEntityWithCopyright
+:LinkEntityWithCopyright rdf:type owl:Class ;
+                         rdfs:subClassOf :LinkEntityWithOrder ;
+                         rdfs:comment "Superclass of CERIF relationship entities having a copyright as property."@en ;
+                         rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                         rdfs:label "Link Entity With Copyright"@en .
+
+
+###  http://eurocris.org/ontology/cerif#LinkEntityWithCounting
+:LinkEntityWithCounting rdf:type owl:Class ;
+                        rdfs:subClassOf :FullLinkEntity ;
+                        rdfs:comment "Superclass of CERIF relationship entities that need to value a quantity for a specific year."@en ;
+                        rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                        rdfs:label "Link Entity With Counting"@en .
+
+
+###  http://eurocris.org/ontology/cerif#LinkEntityWithLanguageSkill
+:LinkEntityWithLanguageSkill rdf:type owl:Class ;
+                             rdfs:subClassOf :FullLinkEntity ;
+                             rdfs:comment "Superclass of CERIF relationship entities that need to indicate values for language skills."@en ;
+                             rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                             rdfs:label "Link Entity With Language Skill"@en .
+
+
+###  http://eurocris.org/ontology/cerif#LinkEntityWithOrder
+:LinkEntityWithOrder rdf:type owl:Class ;
+                     rdfs:subClassOf :FullLinkEntity ;
+                     rdfs:comment "Superclass of CERIF relationship entities having an order as property."@en ;
+                     rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                     rdfs:label "Link Entity With Order"@en .
+
+
+###  http://eurocris.org/ontology/cerif#LinkEntityWithProvision
+:LinkEntityWithProvision rdf:type owl:Class ;
+                         rdfs:subClassOf :FullLinkEntity ;
+                         rdfs:comment "Superclass of CERIF relationship entities having a reference to a CERIF Amount with various criteria for providing services or goods."@en ;
+                         rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                         rdfs:label "Link Entity With Provision"@en .
+
+
+###  http://eurocris.org/ontology/cerif#LinkEntityWithProvisionOrder
+:LinkEntityWithProvisionOrder rdf:type owl:Class ;
+                              rdfs:subClassOf :LinkEntityWithOrder ,
+                                              :LinkEntityWithProvision ;
+                              rdfs:comment "Superclass of CERIF relationship entities having both characteristics of LinkEntityWithProvision and LinkEntityWithOrder."@en ;
+                              rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                              rdfs:label "Link Entity With Provision and Order"@en .
+
+
+###  http://eurocris.org/ontology/cerif#LinkEntityWithProvisionOrderIPR
+:LinkEntityWithProvisionOrderIPR rdf:type owl:Class ;
+                                 rdfs:subClassOf :LinkEntityWithProvisionOrder ;
+                                 rdfs:comment "Superclass of CERIF relationship entities having characteristics of LinkEntityWithProvisionOrder plus information about intellectual property rights."@en ;
+                                 rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                                 rdfs:label "Link Entity With Provisin, Order and IPR"@en .
+
+
+###  http://eurocris.org/ontology/cerif#MainEntity
+:MainEntity rdf:type owl:Class ;
+            rdfs:subClassOf :CoreEntity ;
+            rdfs:comment "This abstract class brings together the main entities of the CERIF model."@en ;
+            rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+            rdfs:label "Main Entity"@en .
+
+
+###  http://eurocris.org/ontology/cerif#Measurement
+:Measurement rdf:type owl:Class ;
+             rdfs:subClassOf :IndicatorAndMeasurement ;
+             rdfs:comment """A measurement is the dimension, quantity, or capacity determined by measuring.
+Definition Source: http://www.thefreedictionary.com/measurement"""@en ;
+             rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+             rdfs:label "Measurement"@en .
+
+
+###  http://eurocris.org/ontology/cerif#Medium
+:Medium rdf:type owl:Class ;
+        rdfs:subClassOf :SecondLayerEntity ;
+        rdfs:comment "A resource used for communicating or diffusing information like an image, a video, etc."@en ;
+        rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+        rdfs:label "Medium"@en .
+
+
+###  http://eurocris.org/ontology/cerif#Metrics
+:Metrics rdf:type owl:Class ;
+         rdfs:subClassOf :SecondLayerEntity ;
+         rdfs:comment ""@en ;
+         rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+         rdfs:label "Metrics"@en .
+
+
+###  http://eurocris.org/ontology/cerif#OrganisationUnit
+:OrganisationUnit rdf:type owl:Class ;
+                  rdfs:subClassOf :BaseEntity ;
+                  rdfs:comment """An organization (or organisation - see spelling differences) is a social group which distributes tasks for a collective goal. The word itself is derived from the Greek word organon, itself derived from the better-known word ergon - as we know `organ` - and it means a compartment for a particular job.
+Definition Source: http://en.wikipedia.org/wiki/Organization"""@en ;
+                  rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                  rdfs:label "Organisation Unit"@en .
+
+
+###  http://eurocris.org/ontology/cerif#Patent
+:Patent rdf:type owl:Class ;
+        rdfs:subClassOf :EntityWithCountry ,
+                        :ResultEntity ;
+        rdfs:comment """A patent is a form of intellectual property. It consists of a set of exclusive rights granted by a sovereign state to an inventor or their assignee for a limited period of time in exchange for the public disclosure of an invention.
+Definition Source: http://en.wikipedia.org/wiki/Patent"""@en ;
+        rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+        rdfs:label "Patent"@en .
+
+
+###  http://eurocris.org/ontology/cerif#Person
+:Person rdf:type owl:Class ;
+        rdfs:subClassOf :BaseEntity ;
+        rdfs:comment """A person (plural: persons or people; from Latin: persona, meaning \"mask\") is a being, such as a human, that has certain capacities or attributes constituting personhood, the precise definition of which is the subject of much controversy.
+Definition Source: http://en.wikipedia.org/wiki/Person"""@en ;
+        rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+        rdfs:label "Person"@en .
+
+
+###  http://eurocris.org/ontology/cerif#PersonName
+:PersonName rdf:type owl:Class ;
+            rdfs:subClassOf :SecondLayerEntity ;
+            rdfs:comment "The name of a Person."@en ;
+            rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+            rdfs:label "Person Name"@en .
+
+
+###  http://eurocris.org/ontology/cerif#PostalAddress
+:PostalAddress rdf:type owl:Class ;
+               rdfs:subClassOf :EntityWithCity ,
+                               :SecondLayerEntity ;
+               rdfs:comment """An address is the place where a person or organization can be found or communicated with.
+Definition Source: http://wordnetweb.princeton.edu/perl/webwn?s=address"""@en ;
+               rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+               rdfs:label "Postal Address"@en .
+
+
+###  http://eurocris.org/ontology/cerif#PriceAward
+:PriceAward rdf:type owl:Class ;
+            rdfs:subClassOf :SecondLayerEntity ;
+            rdfs:comment """Something offered or won as an award for superiority or victory, as in a contest or competition.
+Definition Source: http://www.thefreedictionary.com/prize"""@en ;
+            rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+            rdfs:label "Price Award"@en .
+
+
+###  http://eurocris.org/ontology/cerif#Product
+:Product rdf:type owl:Class ;
+         rdfs:subClassOf :ResultEntity ;
+         rdfs:comment "A CERIF product is considered a result in general, achieved through some effort - and not at all is it a commercial or physical product only. It was intended to also represent i.e. software or 'research data'."@en ;
+         rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+         rdfs:label "Product"@en .
+
+###  http://eurocris.org/ontology/cerif#Dataset
+:Dataset rdf:type owl:Class ;
+         rdfs:subClassOf :Product ;
+         rdfs:comment "Dataset"@en ;
+         rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+         rdfs:label "Dataset"@en .
+
+###  http://eurocris.org/ontology/cerif#Software
+:Software rdf:type owl:Class ;
+         rdfs:subClassOf :Product ;
+         rdfs:comment "Software"@en ;
+         rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+         rdfs:label "Software"@en .
+		 
+###  http://eurocris.org/ontology/cerif#Project
+:Project rdf:type owl:Class ;
+         rdfs:subClassOf :BaseEntity ;
+         rdfs:comment """A project in business and science is typically defined as a collaborative enterprise, frequently involving research or design, that is carefully planned to achieve a particular aim. Projects can be further defined as temporary rather than permanent social systems that are constituted by teams within or across organizations to accomplish particular tasks under time constraints.
+Definition Source: http://en.wikipedia.org/wiki/Project"""@en ;
+         rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+         rdfs:label "Project"@en .
+
+
+###  http://eurocris.org/ontology/cerif#Publication
+:Publication rdf:type owl:Class ;
+             rdfs:subClassOf :ResultEntity ;
+             rdfs:comment """Collection of information records that, in combination, represent a full and up-to-date history of research or scholarly published outputs resulting from, or related to, the person's research activities.
+Definition Source: http://dictionary.casrai.org/research-personnel-profile/1.1.0/contributions/outputs/publications"""@en ;
+             rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+             rdfs:label "Publication"@en .
+
+
+###  http://eurocris.org/ontology/cerif#Qualification
+:Qualification rdf:type owl:Class ;
+               rdfs:subClassOf :SecondLayerEntity ;
+               rdfs:comment """A qualification is an attribute that must be met or complied with and that fits a person for something.
+Definition Source: http://wordnetweb.princeton.edu/perl/webwn?s=qualification"""@en ;
+               rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+               rdfs:label "Qualification"@en .
+
+
+###  http://eurocris.org/ontology/cerif#ReflexiveLink_Classification
+:ReflexiveLink_Classification rdf:type owl:Class ;
+                              rdfs:subClassOf :CoreRelationship ;
+                              rdfs:comment "A specific CERIF relationship entity to be used for relationships between two CERIF Classification Schemes."@en ;
+                              rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                              rdfs:label "Reflexive Link for Classification"@en .
+
+
+###  http://eurocris.org/ontology/cerif#ReflexiveLink_ClassificationScheme
+:ReflexiveLink_ClassificationScheme rdf:type owl:Class ;
+                                    rdfs:subClassOf :CoreRelationship ;
+                                    rdfs:comment "A specific CERIF relationship entity to be used for relationships between two CERIF Classifications."@en ;
+                                    rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                                    rdfs:label "Reflexive Link for Classification Scheme"@en .
+
+
+###  http://eurocris.org/ontology/cerif#ResultEntity
+:ResultEntity rdf:type owl:Class ;
+              rdfs:subClassOf :MainEntity ;
+              rdfs:comment "CERIF regroups entities in several global concepts. Result Entity is the global concept for all what concern research results."@en ;
+              rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+              rdfs:label "ResultEntity"@en .
+
+
+###  http://eurocris.org/ontology/cerif#SecondLayerEntity
+:SecondLayerEntity rdf:type owl:Class ;
+                   rdfs:subClassOf :MainEntity ;
+                   rdfs:comment "CERIF regroups entities in several global concepts. Second Layer Entity is the global concept for all concepts that are not core concepts in the research activity."@en ;
+                   rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                   rdfs:label "Second Layer Entity"@en .
+
+
+###  http://eurocris.org/ontology/cerif#SemanticLayer
+:SemanticLayer rdf:type owl:Class ;
+               rdfs:subClassOf :CoreEntity ;
+               rdfs:comment "CERIF regroups entities in several global concepts. Semantic Layer is the global concept for the semantic part of the CERIF model i.e. Classification and Classification Scheme."@en ;
+               rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+               rdfs:label "Semantic Layer"@en .
+
+
+###  http://eurocris.org/ontology/cerif#Service
+:Service rdf:type owl:Class ;
+         rdfs:subClassOf :InfrastructureEntity ;
+         rdfs:comment "A service is an exchange for money or other commodities where an enduser receives for money from a supplier."@en ;
+         rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+         rdfs:label "Service"@en .
+
+###  http://eurocris.org/ontology/cerif#WebService
+:WebService rdf:type owl:Class ;
+         rdfs:subClassOf :Service ;
+         rdfs:comment "W3C definition: A web service is a software system designed to support interoperable machine-to-machine interaction over a network. It has an interface described in a machine-processable format (specifically WSDL). Other systems interact with the web service in a manner prescribed by its description using SOAP-messages, typically conveyed using HTTP with an XML serialization in conjunction with other web-related standards."@en ;
+         rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+         rdfs:label "WebService"@en .
+		 
+###  http://eurocris.org/ontology/cerif#Workflow
+:WebService rdf:type owl:Class ;
+         rdfs:subClassOf :Service ;
+         rdfs:comment "A workflow consists of an orchestrated and repeatable pattern of business activity enabled by the systematic organization of resources into processes that transform materials, provide services, or process information."@en ;
+         rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+         rdfs:label "Workflow"@en .
+		 
+###  http://eurocris.org/ontology/cerif#SimpleLinkEntity
+:SimpleLinkEntity rdf:type owl:Class ;
+                  rdfs:subClassOf :CoreRelationship ;
+                  rdfs:comment "CERIF relationship entity that links CERIF entity to a CERIF Classification, which allows to give specific semantic meaning to a CERIF entity."@en ;
+                  rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                  rdfs:label "Simple Link Entity"@en .
+
+
+###  http://eurocris.org/ontology/cerif#TimeFramedEntity
+:TimeFramedEntity rdf:type owl:Class ;
+                  rdfs:subClassOf :Entity ;
+                  rdfs:comment "Superclass of CERIF entities with information about a time range (start and end dates)."@en ;
+                  rdfs:isDefinedBy <http://eurocris.org/ontology/cerif> ;
+                  rdfs:label "Time-Framed Entity"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://eurocris.org/ontology/cerif
+<http://eurocris.org/ontology/cerif> rdf:type owl:NamedIndividual .
+
+
+###  http://eurocris.org/ontology/cerif#LanguageSkillFluent
+:LanguageSkillFluent rdf:type owl:NamedIndividual ;
+                     rdfs:comment "Fluent in the language."@en ;
+                     rdfs:label "Fluent"@en .
+
+
+###  http://eurocris.org/ontology/cerif#LanguageSkillMotherTongue
+:LanguageSkillMotherTongue rdf:type owl:NamedIndividual ;
+                           rdfs:comment "Mother tongue or native language."@en ;
+                           rdfs:label "Mother Tongue"@en .
+
+
+###  http://eurocris.org/ontology/cerif#LanguageSkillWorkingKnowledge
+:LanguageSkillWorkingKnowledge rdf:type owl:NamedIndividual ;
+                               rdfs:comment "Working knowledge of the language."@en ;
+                               rdfs:label "Working Knowledge"@en .
+
+
+###  http://eurocris.org/ontology/cerif#brigitte
+:brigitte rdf:type owl:NamedIndividual .
+
+
+###  http://eurocris.org/ontology/cerif#geert
+:geert rdf:type owl:NamedIndividual .
+
+
+###  http://eurocris.org/ontology/cerif#jan
+:jan rdf:type owl:NamedIndividual .
+
+
+###  http://eurocris.org/ontology/cerif#keith
+:keith rdf:type owl:NamedIndividual .
+
+
+###  http://eurocris.org/ontology/cerif#lremy
+:lremy rdf:type owl:NamedIndividual .
+
+
+###  http://eurocris.org/ontology/cerif#msicilia
+:msicilia rdf:type owl:NamedIndividual .
+
+
+###  http://eurocris.org/ontology/cerif#ruizrube
+:ruizrube rdf:type owl:NamedIndividual .
+
+
+###  Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi

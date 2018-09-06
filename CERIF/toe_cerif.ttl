@@ -1,0 +1,59 @@
+@prefix cerif: <http://eurocris.org/ontology/cerif#> .
+@prefix demo:  <https://vre4eic.project.cwi.nl/ns/gender#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+demo:dataset_1_location a cerif:ElectronicAddress ;
+	cerif:has_URI <https://github.com/vre4eic/gender-toe-data/raw/V1.0.1/Events_and_structure.ttl.gz> .
+demo:dataset_2_location a cerif:ElectronicAddress ;
+	cerif:has_URI <https://github.com/vre4eic/gender-toe-data/raw/V1.0.1/MembersOfParliament_background.ttl.gz> .
+demo:dataset_3_location a cerif:ElectronicAddress ;
+	cerif:has_URI <https://github.com/vre4eic/gender-toe-data/raw/V1.0.1/mep_wikidata.ttl.gz> .
+
+demo:class1website a cerif:FullLinkEntity ;
+        cerif:has_classification  demo:classWebsite ;
+        cerif:has_source          demo:dataset_1_location  ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date .
+
+demo:class2website a cerif:FullLinkEntity ;
+        cerif:has_classification  demo:classWebsite ;
+        cerif:has_source          demo:dataset_2_location  ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date .
+
+demo:class3website a cerif:FullLinkEntity ;
+        cerif:has_classification  demo:classWebsite ;
+        cerif:has_source          demo:dataset_3_location  ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date .
+
+demo:dataset_1 a cerif:Product ; 
+	rdfs:label "Events_and_structure"@en ;
+	cerif:has_abstract "Talk of Europe: Description of the dates and order of the events in the plenary meetings, i.e. sessions, session days, agenda items, and speeches, and for the latter, the name of the speaker and spoken language. See https://doi.org/10.3233/SW-160227"@en ;
+	cerif:has_name "EU Parliament debate structure without spoken texts"@en ;
+	cerif:is_destination_of  demo:class1website ;
+        cerif:is_source_of       demo:class1researchdata .
+
+demo:dataset_2 a cerif:Product ; 
+	rdfs:label "MembersOfParliament_background"@en ;
+	cerif:has_abstract "Talk of Europe: Biographical and political information about the Members of Parliament, including first and last name, official MEP identification number, country of representation, birth date, and time- and role-annotated membership of EU parties and committees and national parties. Derived from Bjørn Høyland's database, see https://doi.org/10.1177/1465116508099764"@en ;	
+	cerif:has_name "Background info about MEPs from Høyland."@en ;
+	cerif:is_destination_of  demo:class2website ;
+        cerif:is_source_of       demo:class1researchdata .
+
+demo:dataset_3 a cerif:Product ; 
+	rdfs:label "mep_wikidata.ttl.gz"@en ;
+	cerif:has_abstract "Talk of Europe: Links between Members of Parliament and their corresponding resource in wikidata, using MEP ID to link. See http://doi.acm.org/10.1145/3201064.3201108"@en ;
+	cerif:has_name "ToE MEP identifiers linked to wikidata ids."@en ;
+	cerif:is_destination_of  demo:class2website ;
+        cerif:is_source_of       demo:class1researchdata .
+
+demo:class1researchdata a cerif:SimpleLinkEntity ;
+	cerif:has_classification demo:classResearchData ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date .
+
+demo:classWebsite a cerif:Classification .
+
+demo:classResearchData a cerif:Classification .
