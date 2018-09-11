@@ -1,5 +1,6 @@
 @prefix cerif: <http://eurocris.org/ontology/cerif#> .
 @prefix demo:  <https://vre4eic.project.cwi.nl/ns/gender#> .
+@prefix vre4eic: <http://139.91.183.70:8090/vre4eic/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 
@@ -25,6 +26,42 @@ demo:class2website a cerif:FullLinkEntity ;
 demo:class3website a cerif:FullLinkEntity ;
         cerif:has_classification  demo:classWebsite ;
         cerif:has_source          demo:dataset_3_location  ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date .
+
+demo:ds1_rights_link a cerif:FullLinkEntity ;
+        cerif:has_classification  vre4eic:Classification.BREAD%20rights.edit ;
+        cerif:has_source          demo:dataset_1  ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date .
+
+demo:ds2_rights_link a cerif:FullLinkEntity ;
+        cerif:has_classification  vre4eic:Classification.BREAD%20rights.edit ;
+        cerif:has_source          demo:dataset_2  ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date .
+
+demo:ds3_rights_link a cerif:FullLinkEntity ;
+        cerif:has_classification  vre4eic:Classification.BREAD%20rights.edit ;
+        cerif:has_source          demo:dataset_3  ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date .
+
+demo:ds1_person_role_link a cerif:FullLinkEntity ;
+	cerif:has_classification  vre4eic:Classification.Person%20Organisation%20Roles.Member ;
+        cerif:has_source          vre4eic:Person.Van%20Ossenbruggen.Jacco ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date .
+
+demo:websci_demo_admin_role a cerif:OrganisationUnit ;
+	cerif:is_destination_of	demo:ds1_rights_link;
+	cerif:is_destination_of	demo:ds2_rights_link;
+	cerif:is_destination_of	demo:ds3_rights_link;
+	cerif:is_destination_of	demo:ds1_person_role_link;
+        cerif:is_source_of	demo:classAccessRole .
+
+demo:classAccessRole a cerif:SimpleLinkEntity ;
+	cerif:has_classification vre4eic:Classification.Security%20Objects.Access%20role ;
         cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date ;
         cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date .
 
