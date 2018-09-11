@@ -63,7 +63,7 @@ vre4eic:Service.Skype
         a                  cerif:Service ;
         cerif:has_acronym  "Skype" ;
         cerif:has_name     "Skype"@en ;
-        cerif:has_uri      "https://skype.com" .
+        cerif:has_URI      <https://skype.com> .
 
 vre4eic:FederatedIdentifier.ORCID.0000-0001-5574-5673
         a                   cerif:FederatedIdentifier ;
@@ -74,7 +74,7 @@ vre4eic:Service.Twitter
         a                  cerif:Service ;
         cerif:has_acronym  "twitter" ;
         cerif:has_name     "Twitter"@en ;
-        cerif:has_uri      "https://twitter.com" .
+        cerif:has_URI      <https://twitter.com> .
 
 vre4eic:Project.VRE4EIC
         a                        cerif:Project ;
@@ -104,17 +104,17 @@ vre4eic:Project.VRE4EIC
 
 vre4eic:OrganisationUnit.administrator
         a                        cerif:OrganisationUnit ;
-        rdfs:label               "role"@en ;
+        rdfs:label               "administrator"@en ;
         cerif:is_destination_of  <uuid:CU> , <uuid:DC> , <uuid:CX> , <uuid:DB> , <uuid:DF> , <uuid:CW> , <uuid:DE> , <uuid:DH> , <uuid:DD> , <uuid:DA> , <uuid:DG> , <uuid:DK> , <uuid:CZ> , <uuid:DI> , <uuid:DJ> , <uuid:CY> , <uuid:CV> ;
         cerif:is_source_of       <uuid:CT> .
 
 <http://139.91.183.70:8090/vre4eic/ElectronicAddress.http%3A//data.europa.eu/euodp/repository/ec/dg-grow/mapps/TED_CN_2009_2017.csv>
         a              cerif:ElectronicAddress ;
-        cerif:has_URI  "http://data.europa.eu/euodp/repository/ec/dg-grow/mapps/TED_CN_2009_2017.csv" .
+        cerif:has_URI  <http://data.europa.eu/euodp/repository/ec/dg-grow/mapps/TED_CN_2009_2017.csv> .
 
 <http://139.91.183.70:8090/vre4eic/ElectronicAddress.servicedesk-fs%40uva.nl>
         a              cerif:ElectronicAddress ;
-        cerif:has_URI  "servicedesk-fs@uva.nl" .
+        cerif:has_URI  <mailto:servicedesk-fs@uva.nl> .
 
 <uuid:DG>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.BREAD%20rights.browse> ;
@@ -143,7 +143,7 @@ vre4eic:FederatedIdentifier.ORCID.0000-0002-9942-5521
 
 vre4eic:OrganisationUnit.UvA
         a                        cerif:OrganisationUnit ;
-        rdfs:label               "partner"@en ;
+        rdfs:label               "UvA"@en ;
         cerif:has_acronym        "UvA" ;
         cerif:has_name           "University of Amsterdam"@en ;
         cerif:is_destination_of  <http://139.91.183.70:8090/vre4eic/OrganisationUnit.UvA.PostalAddress.Science%20Park%20904-1098%20XH-Amsterdam-NL> , <http://139.91.183.70:8090/vre4eic/OrganisationUnit.UvA.ElectronicAddress.servicedesk-fs%40uva.nl> .
@@ -207,7 +207,7 @@ vre4eic:Person.Zhiming.Zhao
 
 <http://139.91.183.70:8090/vre4eic/ElectronicAddress.mmuckensturm%40is4ri.com>
         a              cerif:ElectronicAddress ;
-        cerif:has_URI  "mmuckensturm@is4ri.com" .
+        cerif:has_URI  <mailto:mmuckensturm@is4ri.com> .
 
 <uuid:DW>  a                      cerif:SimpleLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Security%20Objects.Access%20role> ;
@@ -256,11 +256,11 @@ vre4eic:FederatedIdentifier.ORCID.0000-0001-7912-9189
 
 <http://139.91.183.70:8090/vre4eic/ElectronicAddress.http%3A//cordis.europa.eu/data/cordis-h2020projects.csv>
         a              cerif:ElectronicAddress ;
-        cerif:has_URI  "http://cordis.europa.eu/data/cordis-h2020projects.csv" .
+        cerif:has_URI  <http://cordis.europa.eu/data/cordis-h2020projects.csv> .
 
 <http://139.91.183.70:8090/vre4eic/ElectronicAddress.%2B31205924141>
         a              cerif:ElectronicAddress ;
-        cerif:has_URI  "+31205924141" .
+        cerif:has_URI  <tel:+31205924141> .
 
 <uuid:DJ>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.BREAD%20rights.add> ;
@@ -292,7 +292,7 @@ vre4eic:FederatedIdentifier.SCOPUS.13405968000
 
 <http://139.91.183.70:8090/vre4eic/ElectronicAddress.J.Wielemaker%40cwi.nl>
         a              cerif:ElectronicAddress ;
-        cerif:has_URI  "J.Wielemaker@cwi.nl" .
+        cerif:has_URI  <mailto:J.Wielemaker@cwi.nl> .
 
 <http://139.91.183.70:8090/vre4eic/FederatedIdentifier.Twitter.%40mm4rc1>
         a                   cerif:FederatedIdentifier ;
@@ -301,11 +301,11 @@ vre4eic:FederatedIdentifier.SCOPUS.13405968000
 
 <http://139.91.183.70:8090/vre4eic/ElectronicAddress.http%3A//data.europa.eu/euodp/repository/ec/efsa/ESFA_CONSUMPTION_DASHBOARD_FORMAT.xlsx>
         a              cerif:ElectronicAddress ;
-        cerif:has_URI  "http://data.europa.eu/euodp/repository/ec/efsa/ESFA_CONSUMPTION_DASHBOARD_FORMAT.xlsx" .
+        cerif:has_URI  <http://data.europa.eu/euodp/repository/ec/efsa/ESFA_CONSUMPTION_DASHBOARD_FORMAT.xlsx> .
 
 <http://139.91.183.70:8090/vre4eic/ElectronicAddress.z.zhao%40uva.nl>
         a              cerif:ElectronicAddress ;
-        cerif:has_URI  "z.zhao@uva.nl" .
+        cerif:has_URI  <mailto:z.zhao@uva.nl> .
 
 <uuid:DR>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.BREAD%20rights.read> ;
@@ -503,7 +503,7 @@ vre4eic:Person.Muckensturm.Marc
 
 vre4eic:OrganisationUnit.euroCRIS
         a                        cerif:OrganisationUnit ;
-        rdfs:label               "partner"@en ;
+        rdfs:label               "euroCRIS"@en ;
         cerif:has_acronym        "euroCRIS" ;
         cerif:has_name           "Current Research Information Systems"@en ;
         cerif:is_destination_of  <http://139.91.183.70:8090/vre4eic/OrganisationUnit.euroCRIS.PostalAddress.Heyendaalseweg%20141-6525%20AJ-Nijmegen-NL> , <http://139.91.183.70:8090/vre4eic/OrganisationUnit.euroCRIS.ElectronicAddress.eurocris%40eurocris.org> .
@@ -675,7 +675,7 @@ vre4eic:Country.FR  a          cerif:Country ;
 
 vre4eic:OrganisationUnit.editor
         a                        cerif:OrganisationUnit ;
-        rdfs:label               "role"@en ;
+        rdfs:label               "editor"@en ;
         cerif:is_destination_of  <uuid:DT> , <uuid:DO> , <uuid:DQ> , <uuid:DN> , <uuid:DV> , <uuid:DP> , <uuid:DS> , <uuid:DM> , <uuid:DU> , <uuid:DR> ;
         cerif:is_source_of       <uuid:DL> .
 
@@ -713,7 +713,7 @@ vre4eic:OrganisationUnit.editor
 
 <http://139.91.183.70:8090/vre4eic/ElectronicAddress.lremy%40is4ri.com>
         a              cerif:ElectronicAddress ;
-        cerif:has_URI  "lremy@is4ri.com" .
+        cerif:has_URI  <mailto:lremy@is4ri.com> .
 
 vre4eic:Person.Remy.Laurent
         a                        cerif:Person ;
@@ -776,14 +776,14 @@ vre4eic:Service.Scopus
         a                  cerif:Service ;
         cerif:has_acronym  "Scopus" ;
         cerif:has_name     "Scopus"@en ;
-        cerif:has_uri      "https://www.scopus.com" .
+        cerif:has_URI      <https://www.scopus.com> .
 
 <http://139.91.183.70:8090/vre4eic/Classification.BREAD%20rights.browse>
         a       cerif:Classification .
 
 <http://139.91.183.70:8090/vre4eic/ElectronicAddress.info%40cwi.nl>
         a              cerif:ElectronicAddress ;
-        cerif:has_URI  "info@cwi.nl" .
+        cerif:has_URI  <mailto:info@cwi.nl> .
 
 <http://139.91.183.70:8090/vre4eic/Classification.Security%20Objects.Access%20role>
         a                               cerif:Classification ;
@@ -823,7 +823,7 @@ vre4eic:Service.Scopus
 
 vre4eic:OrganisationUnit.CWI
         a                        cerif:OrganisationUnit ;
-        rdfs:label               "partner"@en ;
+        rdfs:label               "CWI"@en ;
         cerif:has_acronym        "CWI" ;
         cerif:has_name           "Centrum Wiskunde and Informatica"@en ;
         cerif:is_destination_of  <http://139.91.183.70:8090/vre4eic/OrganisationUnit.CWI.PostalAddress.Science%20Park%20123-1098%20XG-Amsterdam-NL> , <http://139.91.183.70:8090/vre4eic/OrganisationUnit.CWI.ElectronicAddress.info%40cwi.nl> .
@@ -852,15 +852,15 @@ vre4eic:OrganisationUnit.CWI
 
 <http://139.91.183.70:8090/vre4eic/ElectronicAddress.%2B31205257599>
         a              cerif:ElectronicAddress ;
-        cerif:has_URI  "+31205257599" .
+        cerif:has_URI  <tel:+31205257599> .
 
 <http://139.91.183.70:8090/vre4eic/ElectronicAddress.jacco.van.ossenbruggen%40cwi.nl>
         a              cerif:ElectronicAddress ;
-        cerif:has_URI  "jacco.van.ossenbruggen@cwi.nl" .
+        cerif:has_URI  <mailto:jacco.van.ossenbruggen@cwi.nl> .
 
 <http://139.91.183.70:8090/vre4eic/ElectronicAddress.eurocris%40eurocris.org>
         a              cerif:ElectronicAddress ;
-        cerif:has_URI  "eurocris@eurocris.org" .
+        cerif:has_URI  <mailto:eurocris@eurocris.org> .
 
 <http://139.91.183.70:8090/vre4eic/OrganisationUnit.CWI.PostalAddress.Science%20Park%20123-1098%20XG-Amsterdam-NL>
         a                         cerif:FullLinkEntity ;
@@ -883,7 +883,7 @@ vre4eic:OrganisationUnit.CWI
 
 <http://139.91.183.70:8090/vre4eic/ElectronicAddress.https%3A//www.vre4eic.eu>
         a              cerif:ElectronicAddress ;
-        cerif:has_URI  "https://www.vre4eic.eu" .
+        cerif:has_URI  <https://www.vre4eic.eu> .
 
 vre4eic:Country.NL  a          cerif:Country ;
         cerif:has_countryCode  "NL" .
@@ -949,7 +949,7 @@ vre4eic:FederatedIdentifier.SCOPUS.35795419600
 
 <http://139.91.183.70:8090/vre4eic/ElectronicAddress.%2B31205924319>
         a              cerif:ElectronicAddress ;
-        cerif:has_URI  "+31205924319" .
+        cerif:has_URI  <tel:+31205924319> .
 
 <uuid:DQ>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.BREAD%20rights.browse> ;
@@ -985,7 +985,7 @@ vre4eic:Service.ORCID
         a                  cerif:Service ;
         cerif:has_acronym  "ORCID" ;
         cerif:has_name     "ORCID"@en ;
-        cerif:has_uri      "https://orcid.org" .
+        cerif:has_URI      <https://orcid.org> .
 
 <http://139.91.183.70:8090/vre4eic/Classification.BaseEntity%20Contact%20Details.Email>
         a       cerif:Classification .
@@ -1006,7 +1006,7 @@ vre4eic:Service.ORCID
 
 vre4eic:OrganisationUnit.user
         a                        cerif:OrganisationUnit ;
-        rdfs:label               "role"@en ;
+        rdfs:label               "user"@en ;
         cerif:is_destination_of  <uuid:DZ> , <uuid:EB> , <uuid:EA> , <uuid:ED> , <uuid:EC> , <uuid:DY> , <uuid:EE> , <uuid:DX> ;
         cerif:is_source_of       <uuid:DW> .
 
@@ -1046,5 +1046,5 @@ vre4eic:OrganisationUnit.user
 
 <http://139.91.183.70:8090/vre4eic/ElectronicAddress.chenejac%40uns.ars.rs>
         a              cerif:ElectronicAddress ;
-        cerif:has_URI  "chenejac@uns.ars.rs" .
+        cerif:has_URI  <mailto:chenejac@uns.ars.rs> .
 
