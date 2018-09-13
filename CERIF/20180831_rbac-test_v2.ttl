@@ -18,32 +18,32 @@
 
 <uuid:EB>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.BREAD%20rights.browse> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/Product.CORDIS%20-%20EU%20research%20projects%20under%20Horizon%202020%20%282014-2020%29> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:DL>  a                      cerif:SimpleLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Security%20Objects.Access%20role> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:CV>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Organisation%20Roles.Member> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          vre4eic:Person.Remy.Laurent ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:BK>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Contact%20Details.Nationality> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          vre4eic:Country.RS ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:CA>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Output%20Types.Website%20content> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/ElectronicAddress.https%3A//www.vre4eic.eu> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:AU>  a                   cerif:PersonName ;
         cerif:has_familyNames  "Remy" ;
@@ -52,9 +52,9 @@
 <http://139.91.183.70:8090/vre4eic/OrganisationUnit.UvA.PostalAddress.Science%20Park%20904-1098%20XH-Amsterdam-NL>
         a                         cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Organisation%20Contact%20Details.Organisation%20Legal%20Postal%20Address> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/PostalAddress.Science%20Park%20904-1098%20XH-Amsterdam-NL> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <http://139.91.183.70:8090/vre4eic/Classification.BREAD%20rights.edit>
         a       cerif:Classification .
@@ -84,23 +84,23 @@ vre4eic:Project.VRE4EIC
 
 <uuid:DT>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.BREAD%20rights.browse> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/Product.The%20EFSA%20Comprehensive%20European%20Food%20Consumption%20Database> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:CI>  a    cerif:SimpleLinkEntity .
 
 <uuid:BS>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Names.Presented%20Name> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <uuid:BT> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:AH>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Identifier%20Service%20Roles.Issuer> ;
         cerif:has_destination     vre4eic:Service.Scopus ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 vre4eic:OrganisationUnit.administrator
         a                        cerif:OrganisationUnit ;
@@ -118,9 +118,9 @@ vre4eic:OrganisationUnit.administrator
 
 <uuid:DG>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.BREAD%20rights.browse> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/Product.The%20EFSA%20Comprehensive%20European%20Food%20Consumption%20Database> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 vre4eic:FederatedIdentifier.ORCID.0000-0002-9942-5521
         a                   cerif:FederatedIdentifier ;
@@ -131,15 +131,15 @@ vre4eic:FederatedIdentifier.ORCID.0000-0002-9942-5521
 
 <uuid:BF>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Contact%20Details.Professional%20Email> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/ElectronicAddress.mmuckensturm%40is4ri.com> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:AP>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Identifier%20Service%20Roles.Issuer> ;
         cerif:has_destination     vre4eic:Service.ORCID ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 vre4eic:OrganisationUnit.UvA
         a                        cerif:OrganisationUnit ;
@@ -159,45 +159,45 @@ vre4eic:OrganisationUnit.UvA
 
 <uuid:EE>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.BREAD%20rights.read> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/Product.The%20EFSA%20Comprehensive%20European%20Food%20Consumption%20Database> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:DO>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.BREAD%20rights.read> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/Product.CORDIS%20-%20EU%20research%20projects%20under%20Horizon%202020%20%282014-2020%29> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:CY>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.BREAD%20rights.edit> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/Product.CORDIS%20-%20EU%20research%20projects%20under%20Horizon%202020%20%282014-2020%29> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:CD>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Project%20Engagements.Member> ;
         cerif:has_destination     vre4eic:Person.Ivanovic.Dragan ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:BN>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Identifier%20Service%20Roles.Issuer> ;
         cerif:has_destination     vre4eic:Service.ORCID ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:AX>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Identifier%20Service%20Roles.Issuer> ;
         cerif:has_destination     vre4eic:Service.Skype ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:AC>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Contact%20Details.Nationality> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          vre4eic:Country.NL ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <http://139.91.183.70:8090/vre4eic/Classification.Person%20Contact%20Details.Phone>
         a       cerif:Classification .
@@ -211,32 +211,32 @@ vre4eic:Person.Zhiming.Zhao
 
 <uuid:DW>  a                      cerif:SimpleLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Security%20Objects.Access%20role> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:DB>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.BREAD%20rights.browse> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/Product.Tenders%20Electronic%20Daily%20%28TED%29%20%28csv%20subset%29%20%E2%80%93%20public%20procurement%20notices> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:BV>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Contact%20Details.Professional%20Email> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/ElectronicAddress.z.zhao%40uva.nl> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:CL>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Output%20Types.Website%20content> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/ElectronicAddress.http%3A//cordis.europa.eu/data/cordis-h2020projects.csv> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:BA>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Identifier%20Service%20Roles.Issuer> ;
         cerif:has_destination     vre4eic:Service.Twitter ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 vre4eic:FederatedIdentifier.Skype.zhiming72
         a                   cerif:FederatedIdentifier ;
@@ -245,9 +245,9 @@ vre4eic:FederatedIdentifier.Skype.zhiming72
 
 <uuid:AK>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Organisation%20Roles.Member> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          vre4eic:OrganisationUnit.CWI ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 vre4eic:FederatedIdentifier.ORCID.0000-0001-7912-9189
         a                   cerif:FederatedIdentifier ;
@@ -264,9 +264,9 @@ vre4eic:FederatedIdentifier.ORCID.0000-0001-7912-9189
 
 <uuid:DJ>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.BREAD%20rights.add> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/Product.The%20EFSA%20Comprehensive%20European%20Food%20Consumption%20Database> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 vre4eic:FederatedIdentifier.SCOPUS.13405968000
         a                   cerif:FederatedIdentifier ;
@@ -275,20 +275,20 @@ vre4eic:FederatedIdentifier.SCOPUS.13405968000
 
 <uuid:CT>  a                      cerif:SimpleLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Security%20Objects.Access%20role> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:AS>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Organisation%20Roles.Member> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          vre4eic:OrganisationUnit.CWI ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:BI>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Names.Presented%20Name> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <uuid:BJ> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <http://139.91.183.70:8090/vre4eic/ElectronicAddress.J.Wielemaker%40cwi.nl>
         a              cerif:ElectronicAddress ;
@@ -309,51 +309,51 @@ vre4eic:FederatedIdentifier.SCOPUS.13405968000
 
 <uuid:DR>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.BREAD%20rights.read> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/Product.Tenders%20Electronic%20Daily%20%28TED%29%20%28csv%20subset%29%20%E2%80%93%20public%20procurement%20notices> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:CG>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Project%20Engagements.Member> ;
         cerif:has_destination     <http://139.91.183.70:8090/vre4eic/Person.Van%20Ossenbruggen.Jacco> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:BQ>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Identifier%20Service%20Roles.Issuer> ;
         cerif:has_destination     vre4eic:Service.Twitter ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:AF>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Identifier%20Service%20Roles.Issuer> ;
         cerif:has_destination     vre4eic:Service.ORCID ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <http://139.91.183.70:8090/vre4eic/OrganisationUnit.euroCRIS.ElectronicAddress.eurocris%40eurocris.org>
         a                         cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.BaseEntity%20Contact%20Details.Email> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/ElectronicAddress.eurocris%40eurocris.org> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:DZ>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Organisation%20Roles.Member> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          vre4eic:Person.Wielemaker.Jan ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:DE>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.BREAD%20rights.add> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/Product.Tenders%20Electronic%20Daily%20%28TED%29%20%28csv%20subset%29%20%E2%80%93%20public%20procurement%20notices> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:CO>  a                      cerif:SimpleLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Output%20Types.Research%20data%20sets%20and%20databases> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 vre4eic:Person.Zhao.Zhiming
         a                        cerif:Person ;
@@ -364,8 +364,8 @@ vre4eic:Person.Zhao.Zhiming
 <uuid:BY>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Identifier%20Service%20Roles.Issuer> ;
         cerif:has_destination     vre4eic:Service.Twitter ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:BD>  a                   cerif:PersonName ;
         cerif:has_familyNames  "Muckensturm" ;
@@ -373,9 +373,9 @@ vre4eic:Person.Zhao.Zhiming
 
 <uuid:AN>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Contact%20Details.Nationality> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          vre4eic:Country.NL ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 vre4eic:Person.Wielemaker.Jan
         a                        cerif:Person ;
@@ -388,36 +388,36 @@ vre4eic:Person.Wielemaker.Jan
 
 <uuid:EC>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.BREAD%20rights.read> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/Product.CORDIS%20-%20EU%20research%20projects%20under%20Horizon%202020%20%282014-2020%29> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:DM>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Organisation%20Roles.Member> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          vre4eic:Person.Wielemaker.Jan ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:CW>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.BREAD%20rights.browse> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/Product.CORDIS%20-%20EU%20research%20projects%20under%20Horizon%202020%20%282014-2020%29> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:CB>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Project%20Engagements.Member> ;
         cerif:has_destination     vre4eic:Person.Muckensturm.Marc ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <http://139.91.183.70:8090/vre4eic/Classification.Person%20Contact%20Details.Professional%20Email>
         a       cerif:Classification .
 
 <uuid:BL>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Contact%20Details.Professional%20Email> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/ElectronicAddress.chenejac%40uns.ars.rs> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <http://139.91.183.70:8090/vre4eic/Product.Tenders%20Electronic%20Daily%20%28TED%29%20%28csv%20subset%29%20%E2%80%93%20public%20procurement%20notices>
         a                        cerif:Product ;
@@ -428,15 +428,15 @@ vre4eic:Person.Wielemaker.Jan
 
 <uuid:AV>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Contact%20Details.Nationality> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          vre4eic:Country.FR ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:AA>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Names.Presented%20Name> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <uuid:AB> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <http://139.91.183.70:8090/vre4eic/PostalAddress.Heyendaalseweg%20141-6525%20AJ-Nijmegen-NL>
         a                      cerif:PostalAddress ;
@@ -453,9 +453,9 @@ vre4eic:Person.Wielemaker.Jan
 
 <uuid:DU>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.BREAD%20rights.read> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/Product.The%20EFSA%20Comprehensive%20European%20Food%20Consumption%20Database> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <http://139.91.183.70:8090/vre4eic/Classification.BREAD%20rights.read>
         a       cerif:Classification .
@@ -474,8 +474,8 @@ vre4eic:Person.Wielemaker.Jan
 <uuid:AI>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Identifier%20Service%20Roles.Issuer> ;
         cerif:has_destination     vre4eic:Service.Scopus ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 vre4eic:FederatedIdentifier.Skype.jrvosse
         a                   cerif:FederatedIdentifier ;
@@ -497,9 +497,9 @@ vre4eic:Person.Muckensturm.Marc
 <http://139.91.183.70:8090/vre4eic/OrganisationUnit.CWI.ElectronicAddress.info%40cwi.nl>
         a                         cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.BaseEntity%20Contact%20Details.Email> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/ElectronicAddress.info%40cwi.nl> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 vre4eic:OrganisationUnit.euroCRIS
         a                        cerif:OrganisationUnit ;
@@ -510,30 +510,30 @@ vre4eic:OrganisationUnit.euroCRIS
 
 <uuid:DH>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.BREAD%20rights.read> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/Product.The%20EFSA%20Comprehensive%20European%20Food%20Consumption%20Database> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:CR>  a    cerif:SimpleLinkEntity .
 
 <uuid:BG>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Identifier%20Service%20Roles.Issuer> ;
         cerif:has_destination     vre4eic:Service.Twitter ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:AQ>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Contact%20Details.Phone> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/ElectronicAddress.%2B31205924319> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <http://139.91.183.70:8090/vre4eic/OrganisationUnit.euroCRIS.PostalAddress.Heyendaalseweg%20141-6525%20AJ-Nijmegen-NL>
         a                         cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Organisation%20Contact%20Details.Organisation%20Legal%20Postal%20Address> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/PostalAddress.Heyendaalseweg%20141-6525%20AJ-Nijmegen-NL> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 vre4eic:Person.Ivanovic.Dragan
         a                        cerif:Person ;
@@ -551,39 +551,39 @@ vre4eic:FederatedIdentifier.ORCID.0000-0003-100143-2645
 
 <uuid:DP>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.BREAD%20rights.edit> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/Product.CORDIS%20-%20EU%20research%20projects%20under%20Horizon%202020%20%282014-2020%29> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:CZ>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.BREAD%20rights.add> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/Product.CORDIS%20-%20EU%20research%20projects%20under%20Horizon%202020%20%282014-2020%29> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:CE>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Project%20Engagements.Member> ;
         cerif:has_destination     vre4eic:Person.Zhiming.Zhao ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:BO>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Identifier%20Service%20Roles.Issuer> ;
         cerif:has_destination     vre4eic:Service.ORCID ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:AY>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Identifier%20Service%20Roles.Issuer> ;
         cerif:has_destination     vre4eic:Service.ORCID ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:AD>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Contact%20Details.Professional%20Email> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/ElectronicAddress.jacco.van.ossenbruggen%40cwi.nl> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 vre4eic:FederatedIdentifier.Skype.d_ivanovic
         a                   cerif:FederatedIdentifier ;
@@ -596,38 +596,38 @@ vre4eic:FederatedIdentifier.Skype.d_ivanovic
 
 <uuid:DX>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Organisation%20Roles.Member> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          vre4eic:Person.Muckensturm.Marc ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:DC>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.BREAD%20rights.read> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/Product.Tenders%20Electronic%20Daily%20%28TED%29%20%28csv%20subset%29%20%E2%80%93%20public%20procurement%20notices> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:CM>  a                      cerif:SimpleLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Output%20Types.Research%20data%20sets%20and%20databases> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:BW>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Identifier%20Service%20Roles.Issuer> ;
         cerif:has_destination     vre4eic:Service.Skype ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:BB>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Organisation%20Roles.Member> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          vre4eic:OrganisationUnit.euroCRIS ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:AL>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Names.Presented%20Name> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <uuid:AM> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <http://139.91.183.70:8090/vre4eic/Classification.BREAD%20rights.delete>
         a       cerif:Classification .
@@ -639,21 +639,21 @@ vre4eic:FederatedIdentifier.Skype.d_ivanovic
 
 <uuid:EA>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Organisation%20Roles.Member> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/Person.Van%20Ossenbruggen.Jacco> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:DK>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.BREAD%20rights.delete> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/Product.The%20EFSA%20Comprehensive%20European%20Food%20Consumption%20Database> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:CU>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Organisation%20Roles.Member> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          vre4eic:Person.Muckensturm.Marc ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 vre4eic:FederatedIdentifier.SCOPUS.55897905700
         a                   cerif:FederatedIdentifier ;
@@ -666,9 +666,9 @@ vre4eic:FederatedIdentifier.SCOPUS.55897905700
 
 <uuid:AT>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Names.Presented%20Name> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <uuid:AU> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 vre4eic:Country.FR  a          cerif:Country ;
         cerif:has_countryCode  "FR" .
@@ -681,9 +681,9 @@ vre4eic:OrganisationUnit.editor
 
 <uuid:DS>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.BREAD%20rights.edit> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/Product.Tenders%20Electronic%20Daily%20%28TED%29%20%28csv%20subset%29%20%E2%80%93%20public%20procurement%20notices> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <http://139.91.183.70:8090/vre4eic/PostalAddress.Science%20Park%20123-1098%20XG-Amsterdam-NL>
         a                      cerif:PostalAddress ;
@@ -696,15 +696,15 @@ vre4eic:OrganisationUnit.editor
 
 <uuid:BR>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Organisation%20Roles.Member> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          vre4eic:OrganisationUnit.euroCRIS ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:AG>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Contact%20Details.Phone> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/ElectronicAddress.%2B31205924141> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <http://139.91.183.70:8090/vre4eic/FederatedIdentifier.Twitter.%40Laurent_is4ri>
         a                   cerif:FederatedIdentifier ;
@@ -737,15 +737,15 @@ vre4eic:FederatedIdentifier.SCOPUS.25222297400
 
 <uuid:DF>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.BREAD%20rights.delete> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/Product.Tenders%20Electronic%20Daily%20%28TED%29%20%28csv%20subset%29%20%E2%80%93%20public%20procurement%20notices> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:CP>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Output%20Types.Website%20content> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/ElectronicAddress.http%3A//data.europa.eu/euodp/repository/ec/efsa/ESFA_CONSUMPTION_DASHBOARD_FORMAT.xlsx> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <http://139.91.183.70:8090/vre4eic/PostalAddress.Science%20Park%20904-1098%20XH-Amsterdam-NL>
         a                      cerif:PostalAddress ;
@@ -756,21 +756,21 @@ vre4eic:FederatedIdentifier.SCOPUS.25222297400
 
 <uuid:BZ>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Organisation%20Roles.Member> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          vre4eic:OrganisationUnit.UvA ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:BE>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Contact%20Details.Nationality> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          vre4eic:Country.FR ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:AO>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Contact%20Details.Professional%20Email> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/ElectronicAddress.J.Wielemaker%40cwi.nl> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 vre4eic:Service.Scopus
         a                  cerif:Service ;
@@ -801,21 +801,21 @@ vre4eic:Service.Scopus
 
 <uuid:ED>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.BREAD%20rights.browse> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/Product.The%20EFSA%20Comprehensive%20European%20Food%20Consumption%20Database> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:DN>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.BREAD%20rights.browse> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/Product.CORDIS%20-%20EU%20research%20projects%20under%20Horizon%202020%20%282014-2020%29> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:CX>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.BREAD%20rights.read> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/Product.CORDIS%20-%20EU%20research%20projects%20under%20Horizon%202020%20%282014-2020%29> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <http://139.91.183.70:8090/vre4eic/Classification.Output%20Types.Research%20data%20sets%20and%20databases>
         a                               cerif:Classification ;
@@ -831,20 +831,20 @@ vre4eic:OrganisationUnit.CWI
 <uuid:CC>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Project%20Engagements.Member> ;
         cerif:has_destination     vre4eic:Person.Remy.Laurent ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:BM>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Identifier%20Service%20Roles.Issuer> ;
         cerif:has_destination     vre4eic:Service.Skype ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:AW>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Contact%20Details.Professional%20Email> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/ElectronicAddress.lremy%40is4ri.com> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:AB>  a                   cerif:PersonName ;
         cerif:has_familyNames  "Van Ossenbruggen" ;
@@ -865,21 +865,21 @@ vre4eic:OrganisationUnit.CWI
 <http://139.91.183.70:8090/vre4eic/OrganisationUnit.CWI.PostalAddress.Science%20Park%20123-1098%20XG-Amsterdam-NL>
         a                         cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Organisation%20Contact%20Details.Organisation%20Legal%20Postal%20Address> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/PostalAddress.Science%20Park%20123-1098%20XG-Amsterdam-NL> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:DV>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.BREAD%20rights.edit> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/Product.The%20EFSA%20Comprehensive%20European%20Food%20Consumption%20Database> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:DA>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.BREAD%20rights.delete> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/Product.CORDIS%20-%20EU%20research%20projects%20under%20Horizon%202020%20%282014-2020%29> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <http://139.91.183.70:8090/vre4eic/ElectronicAddress.https%3A//www.vre4eic.eu>
         a              cerif:ElectronicAddress ;
@@ -890,27 +890,27 @@ vre4eic:Country.NL  a          cerif:Country ;
 
 <uuid:CK>  a                      cerif:SimpleLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Output%20Types.Research%20data%20sets%20and%20databases> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:BU>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Contact%20Details.Nationality> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          vre4eic:Country.CN ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:AJ>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Identifier%20Service%20Roles.Issuer> ;
         cerif:has_destination     vre4eic:Service.Twitter ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <http://139.91.183.70:8090/vre4eic/OrganisationUnit.UvA.ElectronicAddress.servicedesk-fs%40uva.nl>
         a                         cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.BaseEntity%20Contact%20Details.Email> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/ElectronicAddress.servicedesk-fs%40uva.nl> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 vre4eic:FederatedIdentifier.SCOPUS.57194545981
         a                   cerif:FederatedIdentifier ;
@@ -924,23 +924,23 @@ vre4eic:FederatedIdentifier.ORCID.0000-0002-7748-4715
 
 <uuid:DI>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.BREAD%20rights.edit> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/Product.The%20EFSA%20Comprehensive%20European%20Food%20Consumption%20Database> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:CS>  a    cerif:SimpleLinkEntity .
 
 <uuid:BH>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Organisation%20Roles.Member> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          vre4eic:OrganisationUnit.euroCRIS ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:AR>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Identifier%20Service%20Roles.Issuer> ;
         cerif:has_destination     vre4eic:Service.Scopus ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 vre4eic:FederatedIdentifier.SCOPUS.35795419600
         a                   cerif:FederatedIdentifier ;
@@ -953,33 +953,33 @@ vre4eic:FederatedIdentifier.SCOPUS.35795419600
 
 <uuid:DQ>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.BREAD%20rights.browse> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/Product.Tenders%20Electronic%20Daily%20%28TED%29%20%28csv%20subset%29%20%E2%80%93%20public%20procurement%20notices> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:CF>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Project%20Engagements.Member> ;
         cerif:has_destination     vre4eic:Person.Wielemaker.Jan ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:BP>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Identifier%20Service%20Roles.Issuer> ;
         cerif:has_destination     vre4eic:Service.Scopus ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:AZ>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Identifier%20Service%20Roles.Issuer> ;
         cerif:has_destination     vre4eic:Service.Scopus ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:AE>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Identifier%20Service%20Roles.Issuer> ;
         cerif:has_destination     vre4eic:Service.Skype ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 vre4eic:Service.ORCID
         a                  cerif:Service ;
@@ -1012,33 +1012,33 @@ vre4eic:OrganisationUnit.user
 
 <uuid:DY>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Organisation%20Roles.Member> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          vre4eic:Person.Remy.Laurent ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:DD>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.BREAD%20rights.edit> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/Product.Tenders%20Electronic%20Daily%20%28TED%29%20%28csv%20subset%29%20%E2%80%93%20public%20procurement%20notices> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:CN>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Output%20Types.Website%20content> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/ElectronicAddress.http%3A//data.europa.eu/euodp/repository/ec/dg-grow/mapps/TED_CN_2009_2017.csv> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:BX>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Contact%20Details.Phone> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <http://139.91.183.70:8090/vre4eic/ElectronicAddress.%2B31205257599> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:BC>  a                      cerif:FullLinkEntity ;
         cerif:has_classification  <http://139.91.183.70:8090/vre4eic/Classification.Person%20Names.Presented%20Name> ;
-        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:date ;
+        cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime ;
         cerif:has_source          <uuid:BD> ;
-        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:date .
+        cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime .
 
 <uuid:AM>  a                   cerif:PersonName ;
         cerif:has_familyNames  "Wielemaker" ;
