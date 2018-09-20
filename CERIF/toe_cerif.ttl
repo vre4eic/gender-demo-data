@@ -7,26 +7,26 @@
 # Our RDF graph locations
 demo:graph_wikidata_properties_uri a cerif:ElectronicAddress ;
 	cerif:has_URI <https://vre4eic.project.cwi.nl/gender/graph/wikidata_properties> .
-demo:graph_hoylang_uri a cerif:ElectronicAddress ;
+demo:graph_hoyland_uri a cerif:ElectronicAddress ;
 	cerif:has_URI <https://vre4eic.project.cwi.nl/gender/graph/hoyland> .
 demo:graph_structure_uri a cerif:ElectronicAddress ;
 	cerif:has_URI <https://vre4eic.project.cwi.nl/gender/graph/structure> .
 
 demo:class_wikidata_properties_website a cerif:FullLinkEntity ;
         cerif:has_classification  vre4eic:Classification.Output%20Types.Website%20content ;
-        cerif:has_source          demo:wikidata_properties_uri ;
+        cerif:has_source          demo:graph_wikidata_properties_uri ;
         cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime ;
         cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime .
 
 demo:class_hoyland_website a cerif:FullLinkEntity ;
         cerif:has_classification  vre4eic:Classification.Output%20Types.Website%20content ;
-        cerif:has_source          demo:hoyland_uri ;
+        cerif:has_source          demo:graph_hoyland_uri ;
         cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime ;
         cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime .
 
 demo:class_structure_website a cerif:FullLinkEntity ;
         cerif:has_classification  vre4eic:Classification.Output%20Types.Website%20content ;
-        cerif:has_source          demo:structure_uri ;
+        cerif:has_source          demo:graph_structure_uri ;
         cerif:has_startDate       "1900-01-01T00:00:00"^^xsd:dateTime ;
         cerif:has_endDate         "2099-12-31T23:59:59"^^xsd:dateTime .
 
